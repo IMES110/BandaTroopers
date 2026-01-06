@@ -277,6 +277,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
 "aaG" = (
@@ -430,15 +433,21 @@
 /area/golden_arrow/engineering)
 "aaR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/delta{
-	dir = 1
+	dir = 1;
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aaS" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/poster,
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
 "aaT" = (
@@ -519,7 +528,8 @@
 	dir = 2;
 	id_tag = "tc02";
 	name = "\improper Treatment Center";
-	req_access = null
+	req_access = null;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -718,6 +728,10 @@
 	dir = 4;
 	light_power = 0.7
 	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 6;
+	pixel_y = -2
+	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/cryo_cells)
 "aby" = (
@@ -739,7 +753,7 @@
 /area/golden_arrow/platoonarmory)
 "abC" = (
 /obj/structure/window/framed/almayer,
-/turf/open/space/basic,
+/turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "abD" = (
 /obj/effect/decal/warning_stripes{
@@ -844,6 +858,9 @@
 /area/golden_arrow/supply)
 "aca" = (
 /obj/structure/machinery/optable,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "acb" = (
@@ -888,7 +905,7 @@
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -981,6 +998,9 @@
 	},
 /obj/item/toy/plush/therapy/purple{
 	pixel_y = 19
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	brightness = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
@@ -1566,6 +1586,13 @@
 	icon_state = "door_warning"
 	},
 /obj/structure/machinery/power/apc/power/east,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "afd" = (
@@ -1654,6 +1681,7 @@
 	icon_state = "road_edge_decal8";
 	pixel_x = -2
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "afu" = (
@@ -1778,9 +1806,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "afQ" = (
-/turf/closed/wall/almayer/outer{
-	opacity = 0
-	},
+/obj/structure/sign/poster/propaganda,
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoonprep)
 "afR" = (
 /turf/open/floor/almayer/edge,
@@ -1835,6 +1862,9 @@
 /turf/open/floor/almayer/red/northeast,
 /area/golden_arrow/dorms)
 "agd" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/orange/southeast,
 /area/golden_arrow/platoonarmory)
 "age" = (
@@ -1860,6 +1890,9 @@
 /area/golden_arrow/supply)
 "agh" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "agj" = (
@@ -1963,6 +1996,9 @@
 	pixel_y = -3;
 	density = 0
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "agT" = (
@@ -2057,7 +2093,9 @@
 /area/golden_arrow/medical)
 "ahk" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/bravo{
-	dir = 1
+	dir = 1;
+	req_one_access = null;
+	req_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
@@ -2543,7 +2581,6 @@
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_power = 0.7;
 	pixel_y = 22
 	},
 /turf/open/floor/almayer/plate,
@@ -2585,15 +2622,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ajy" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/structure/machinery/disposal,
-/turf/open/floor/almayer/edge/smooth/endcap_right/west,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer_hull/outerhull_dir/northeast,
+/area/space)
 "ajA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box{
@@ -2604,6 +2634,10 @@
 /obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = -1;
 	pixel_y = 5
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
@@ -2759,6 +2793,9 @@
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 2
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aky" = (
@@ -2844,6 +2881,9 @@
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "akN" = (
@@ -2907,19 +2947,11 @@
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
 "ala" = (
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	layer = 2.97;
-	pixel_y = -4
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "alb" = (
 /obj/structure/cargo_container/uscm/mid{
 	pixel_y = 7;
@@ -2945,6 +2977,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "alf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/orangecorner/north,
 /area/golden_arrow/platoonarmory)
 "all" = (
@@ -3030,6 +3065,9 @@
 	mouse_opacity = 0;
 	layer = 2
 	},
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 1
+	},
 /turf/open/floor/almayer/no_build/plate,
 /area/golden_arrow/hangar)
 "alz" = (
@@ -3043,7 +3081,6 @@
 "alA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp,
-/obj/item/clothing/glasses/hud/health,
 /obj/structure/machinery/computer/overwatch/almayer{
 	dir = 4;
 	layer = 3.2;
@@ -3136,7 +3173,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "alR" = (
-/obj/structure/machinery/light/small/blue/golden_arrow,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/silver,
 /area/golden_arrow/dorms)
 "alS" = (
@@ -3201,12 +3240,12 @@
 /area/golden_arrow/supply)
 "amd" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/glasses/hud/health,
 /obj/structure/machinery/computer/crew/alt{
 	dir = 4;
 	pixel_x = -2;
 	pixel_y = 10
 	},
+/obj/item/clothing/glasses/night/medhud/no_nvg,
 /turf/open/floor/almayer/orange/west,
 /area/golden_arrow/platoon_commander_rooms)
 "ame" = (
@@ -3316,6 +3355,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "amw" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/orangecorner/east,
 /area/golden_arrow/platoonarmory)
 "amy" = (
@@ -3407,13 +3449,10 @@
 /area/golden_arrow/hangar)
 "amS" = (
 /obj/structure/window/framed/almayer/white/hull,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "Medical Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "or1privacyshutter"
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Medical Bay";
+	id = "cargolockswest";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/medical)
@@ -3871,6 +3910,9 @@
 /area/golden_arrow/hangar)
 "aot" = (
 /obj/structure/machinery/chem_dispenser/canteen,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aou" = (
@@ -3901,6 +3943,9 @@
 /area/golden_arrow/hangar)
 "aoz" = (
 /obj/structure/barricade/handrail/medical,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
 "aoC" = (
@@ -3930,6 +3975,10 @@
 /obj/structure/machinery/computer/cryopod{
 	pixel_x = 1;
 	pixel_y = 3
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
@@ -3979,7 +4028,6 @@
 /area/golden_arrow/lower_cargo)
 "ape" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir,
 /area/space)
 "aph" = (
@@ -4380,6 +4428,12 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoon_commander_rooms)
 "aqR" = (
@@ -4397,6 +4451,10 @@
 /area/golden_arrow/vehicle_shuttle/two/upper)
 "aqS" = (
 /obj/structure/cargo_container/seegson/left,
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 4;
+	opacity = 1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aqT" = (
@@ -4506,6 +4564,10 @@
 	pixel_x = 4;
 	pixel_y = 11
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
 "arn" = (
@@ -4532,7 +4594,9 @@
 /area/golden_arrow/cryo_cells)
 "ars" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/charlie{
-	dir = 1
+	dir = 1;
+	req_access = null;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
@@ -4558,8 +4622,7 @@
 /area/golden_arrow/hangar)
 "arz" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -4618,6 +4681,9 @@
 	density = 1;
 	pixel_y = 1
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "arM" = (
@@ -4665,6 +4731,11 @@
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "cargolockswest";
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
@@ -4798,6 +4869,9 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "asV" = (
@@ -4807,7 +4881,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -4896,10 +4971,21 @@
 	dir = 8
 	},
 /obj/structure/largecrate/random/secure,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "atq" = (
-/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "atv" = (
@@ -5002,6 +5088,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "atM" = (
@@ -5054,6 +5141,9 @@
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
 	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5109,6 +5199,9 @@
 /obj/item/clothing/head/helmet/marine/rto{
 	pixel_x = 5;
 	pixel_y = 10
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
 	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
@@ -5274,15 +5367,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "auV" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/cryo_cells)
+/turf/open/floor/almayer_hull/outerhull_dir/east,
+/area/space)
 "avb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -5326,7 +5412,9 @@
 /area/golden_arrow/cryo_cells)
 "avh" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/alpha{
-	dir = 1
+	dir = 1;
+	req_access = null;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
@@ -5351,15 +5439,17 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "cargolockswest";
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "avq" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_power = 0.7;
-	pixel_x = -6;
-	pixel_y = 3;
-	layer = 2.97
+	brightness = 7
 	},
 /turf/open/floor/almayer/blue/northwest,
 /area/golden_arrow/dorms)
@@ -5492,6 +5582,9 @@
 /area/golden_arrow/hangar)
 "awf" = (
 /obj/structure/machinery/power/apc/power/east,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
 "awk" = (
@@ -5550,7 +5643,8 @@
 	dir = 9
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+	light_power = 0.25;
+	brightness = 7
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
@@ -5584,12 +5678,12 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/cryo_cells)
 "awI" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
 "awK" = (
 /obj/structure/window/framed/almayer/white,
 /turf/open/floor/plating,
@@ -5769,7 +5863,9 @@
 	pixel_x = 7;
 	pixel_y = -29
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/red,
 /area/golden_arrow/platoonarmory)
 "axr" = (
@@ -5804,6 +5900,11 @@
 /area/golden_arrow/lower_cargo)
 "axt" = (
 /obj/structure/machinery/disposal,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
+	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/supply)
 "axv" = (
@@ -5878,6 +5979,9 @@
 /area/golden_arrow/supply)
 "axK" = (
 /obj/structure/machinery/chem_dispenser/canteen,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/silver,
 /area/golden_arrow/cryo_cells)
 "axL" = (
@@ -6110,7 +6214,6 @@
 	pixel_y = 32
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
 	dir = 1
 	},
 /turf/open/floor/almayer/emerald/north,
@@ -6135,6 +6238,12 @@
 	req_one_access = null;
 	dir = 4
 	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
 "ayI" = (
@@ -6154,6 +6263,9 @@
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
@@ -6354,6 +6466,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "azv" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/bluecorner/west,
 /area/golden_arrow/platoonarmory)
 "azw" = (
@@ -6477,6 +6592,16 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"azM" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
 "azN" = (
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/plating/plating_catwalk,
@@ -6563,10 +6688,6 @@
 	pixel_x = 6;
 	pixel_y = -2
 	},
-/obj/structure/machinery/firealarm{
-	dir = 4;
-	pixel_x = 21
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
@@ -6617,6 +6738,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
 "aAo" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/emeraldcorner,
 /area/golden_arrow/platoonarmory)
 "aAp" = (
@@ -6666,8 +6788,8 @@
 /obj/structure/phone_base{
 	pixel_y = 30;
 	name = "supply launch bay receiver";
-	phone_category = "Golden Arrow";
-	phone_id = "Supply Launch Bay";
+	phone_category = "Blue Ridge";
+	phone_id = "Upper Supply Launch Bay";
 	pixel_x = 2
 	},
 /obj/structure/barricade/handrail{
@@ -6720,6 +6842,9 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "or1privacyshutter";
 	name = "\improper Emergency Shutter"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -7028,7 +7153,8 @@
 "aBO" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/lower_cargo)
@@ -7230,6 +7356,10 @@
 	pixel_y = 6;
 	layer = 5.2
 	},
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 4;
+	opacity = 1
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aCA" = (
@@ -7336,7 +7466,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
@@ -7397,12 +7528,13 @@
 	req_one_access = list();
 	name = "squad two smartgunner locker"
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aDh" = (
-/turf/closed/wall/almayer/outer{
-	opacity = 0
-	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/platoon_commander_rooms)
 "aDi" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7440,7 +7572,6 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "aDr" = (
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull,
 /area/space)
 "aDs" = (
@@ -7489,9 +7620,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aDG" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.5;
-	dir = 1
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
@@ -7530,6 +7661,9 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/motor_pool)
 "aDL" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
 "aDO" = (
@@ -7544,8 +7678,7 @@
 /area/golden_arrow/platoonprep)
 "aDR" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -7591,7 +7724,7 @@
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -7981,6 +8114,13 @@
 	pixel_y = 3;
 	layer = 2.97
 	},
+/obj/item/tool/wet_sign{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aFy" = (
@@ -8021,6 +8161,10 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/hangar)
 "aFG" = (
@@ -8186,7 +8330,8 @@
 /area/golden_arrow/platoonarmory)
 "aGm" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo/yellow{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -8241,8 +8386,9 @@
 /area/golden_arrow/platoonprep)
 "aGv" = (
 /obj/structure/window/framed/almayer/hull,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "CIC Shutters";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
@@ -8281,6 +8427,11 @@
 "aGD" = (
 /obj/structure/machinery/power/apc/power/west,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38;
+	pixel_x = -1
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aGF" = (
@@ -8369,6 +8520,9 @@
 	pixel_y = -19
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aHb" = (
@@ -8425,11 +8579,11 @@
 	dir = 4;
 	pixel_x = 2
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
 	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
@@ -8460,8 +8614,7 @@
 /area/golden_arrow/medical)
 "aHs" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8557,6 +8710,9 @@
 	},
 /obj/structure/machinery/iv_drip,
 /obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "aHV" = (
@@ -8573,6 +8729,9 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
 "aHZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aIb" = (
@@ -8692,7 +8851,7 @@
 "aIu" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -8713,7 +8872,6 @@
 	},
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_power = 0.7;
 	pixel_x = -6;
 	pixel_y = 3
 	},
@@ -8723,6 +8881,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
 	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
@@ -8773,8 +8934,7 @@
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	light_power = 0.7
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/cryo_cells)
@@ -9174,7 +9334,8 @@
 "aKx" = (
 /obj/structure/machinery/door/airlock/almayer/medical{
 	id_tag = "or03";
-	name = "Lobby"
+	name = "Lobby";
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -9349,7 +9510,7 @@
 "aLs" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
-	id = "lowerblastdoor"
+	name = "Preps"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/engineering)
@@ -9657,7 +9818,10 @@
 	dir = 4;
 	pixel_x = 2
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
 /turf/open/floor/almayer/red,
 /area/golden_arrow/platoonarmory)
 "aMK" = (
@@ -9744,9 +9908,13 @@
 	pixel_x = 7;
 	pixel_y = -29
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
 "aNa" = (
@@ -9876,9 +10044,7 @@
 	layer = 2.5;
 	pixel_y = 1
 	},
-/turf/closed/wall/almayer/outer{
-	opacity = 0
-	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aNL" = (
 /obj/structure/machinery/disposal,
@@ -9927,9 +10093,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aNY" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3
-	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aOd" = (
@@ -9947,12 +10111,12 @@
 /area/golden_arrow/supply)
 "aOi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/glasses/hud/health,
 /obj/structure/machinery/computer/crew/alt{
 	dir = 8;
 	pixel_x = 2;
 	pixel_y = 10
 	},
+/obj/item/clothing/glasses/night/medhud/no_nvg,
 /turf/open/floor/almayer/red/east,
 /area/golden_arrow/platoon_commander_rooms)
 "aOk" = (
@@ -10020,7 +10184,9 @@
 /area/golden_arrow/platoon_commander_rooms)
 "aOx" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/delta{
-	dir = 1
+	dir = 1;
+	req_one_access = null;
+	req_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
@@ -10125,6 +10291,12 @@
 	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
+"aPa" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/area/golden_arrow/platoonprep)
 "aPb" = (
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt{
@@ -10328,7 +10500,8 @@
 "aPG" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/platform,
@@ -10387,6 +10560,11 @@
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "cargolockswest";
+	dir = 4
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
@@ -10542,11 +10720,6 @@
 	pixel_y = 8;
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	layer = 2.97;
-	pixel_y = -4
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aQQ" = (
@@ -10580,6 +10753,9 @@
 	name = "dip cup";
 	pixel_x = 5;
 	pixel_y = 25
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -10653,6 +10829,9 @@
 	layer = 3.6;
 	pixel_x = -3
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
 "aRd" = (
@@ -10672,6 +10851,9 @@
 	pixel_x = -6;
 	pixel_y = 3;
 	layer = 2.97
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -10804,9 +10986,12 @@
 /turf/open/floor/almayer/sterile_green_corner,
 /area/golden_arrow/medical)
 "aRC" = (
-/obj/structure/extinguisher_cabinet/alt,
-/turf/closed/wall/almayer/white/hull,
-/area/golden_arrow/medical)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/prep_hallway)
 "aRD" = (
 /obj/structure/extinguisher_cabinet/alt,
 /turf/closed/wall/almayer,
@@ -10822,6 +11007,9 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
 "aRI" = (
@@ -10832,6 +11020,9 @@
 	icon_state = "triagedecaldir";
 	dir = 2
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "aRK" = (
@@ -10839,6 +11030,10 @@
 	req_access_txt = "14;39";
 	req_one_access = list();
 	name = "squad one smartgunner locker"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
@@ -10973,6 +11168,9 @@
 "aRX" = (
 /obj/structure/machinery/door/poddoor/railing,
 /obj/item/tool/warning_cone,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "aSa" = (
@@ -11137,6 +11335,10 @@
 /turf/open/floor/almayer/orangecorner/west,
 /area/golden_arrow/platoonarmory)
 "aSw" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Preps"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "aSA" = (
@@ -11160,6 +11362,10 @@
 	req_access_txt = "14;39";
 	req_one_access = list();
 	name = "squad one smartgunner locker"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
 	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
@@ -11281,6 +11487,9 @@
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/golden_arrow/medical)
 "aTh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/bluecorner,
 /area/golden_arrow/platoonarmory)
 "aTi" = (
@@ -11360,6 +11569,9 @@
 	dir = 8
 	},
 /obj/structure/machinery/door/poddoor/railing,
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "aTA" = (
@@ -11386,6 +11598,10 @@
 /obj/item/stool{
 	pixel_y = 12;
 	pixel_x = -1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 8
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supply)
@@ -11439,7 +11655,8 @@
 /area/golden_arrow/hangar)
 "aTX" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
-	dir = 1
+	dir = 1;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -11495,6 +11712,10 @@
 	pixel_x = -2;
 	pixel_y = 1
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
 /turf/open/floor/almayer/red/northwest,
 /area/golden_arrow/platoonarmory)
 "aUi" = (
@@ -11523,6 +11744,7 @@
 /turf/open/floor/almayer_hull/outerhull_dir/northeast,
 /area/golden_arrow/platoon_commander_rooms)
 "aUv" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/orangecorner,
 /area/golden_arrow/platoonarmory)
 "aUy" = (
@@ -11624,7 +11846,6 @@
 /area/golden_arrow/hangar)
 "aUT" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/east,
 /area/space)
 "aUX" = (
@@ -11678,7 +11899,8 @@
 /area/golden_arrow/cryo_cells)
 "aVi" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/charlie_delta{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -11690,11 +11912,18 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aVk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aVl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/hangar)
@@ -11832,8 +12061,8 @@
 /area/golden_arrow/cryo_cells)
 "aVW" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 4
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonprep)
@@ -11931,7 +12160,6 @@
 	pixel_y = 8
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
 	dir = 1;
 	pixel_y = 8
 	},
@@ -12147,6 +12375,9 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aXr" = (
@@ -12259,6 +12490,12 @@
 "aXV" = (
 /turf/closed/wall/almayer/outer/gear,
 /area/golden_arrow/motor_pool)
+"aXY" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/platoon_commander_rooms)
 "aYb" = (
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/cryo_cells)
@@ -12278,6 +12515,14 @@
 /area/golden_arrow/supply)
 "aYk" = (
 /obj/structure/machinery/power/apc/power/east,
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38;
+	pixel_y = -13
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
 "aYl" = (
@@ -12312,11 +12557,18 @@
 	dir = 4;
 	pixel_x = 2
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
 /turf/open/floor/almayer/emerald/north,
 /area/golden_arrow/platoonarmory)
 "aYq" = (
 /obj/structure/window/framed/almayer/hull,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "CIC Shutters";
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/golden_arrow/platoon_commander_rooms)
 "aYs" = (
@@ -12540,11 +12792,6 @@
 	pixel_y = 8;
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	layer = 2.97;
-	pixel_y = -4
-	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aZx" = (
@@ -12696,6 +12943,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
+"bfr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "bhi" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/emails{
@@ -12743,7 +12996,8 @@
 "bkv" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -12778,6 +13032,16 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/golden_arrow/platoon_commander_rooms)
+"boQ" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 1;
+	name = "Preps"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "bqs" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -12856,7 +13120,7 @@
 /area/golden_arrow/lower_cargo)
 "bxi" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/prep_hallway)
 "bxw" = (
 /obj/effect/decal/cleanable/dirt{
@@ -12894,6 +13158,13 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
+"bzQ" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	brightness = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "bAy" = (
 /obj/structure/machinery/door_control{
 	id = "lowervehiclebay2";
@@ -12969,6 +13240,10 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
+/obj/item/clothing/glasses/night/medhud/no_nvg{
+	pixel_y = -9;
+	pixel_x = 6
+	},
 /turf/open/floor/almayer/emerald/southeast,
 /area/golden_arrow/platoon_commander_rooms)
 "bGO" = (
@@ -12978,6 +13253,12 @@
 	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoon_commander_rooms)
+"bHp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonprep)
 "bIe" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/reagent_container/food/drinks/bottle/gin{
@@ -13016,6 +13297,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"bKU" = (
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = -11;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "bMi" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4
@@ -13037,6 +13325,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"bNJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
 "bOR" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13066,6 +13360,12 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
+"bQO" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "bRa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -13073,7 +13373,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13092,6 +13393,11 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/engineering)
+"bTb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "bTY" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13127,6 +13433,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"bUL" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/hangar)
 "bUO" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hop,
@@ -13136,6 +13448,12 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 1;
 	name = "\improper Prep Lockers"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"bZB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -13178,6 +13496,10 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
+"ccj" = (
+/obj/structure/sign/poster/safety,
+/turf/closed/wall/almayer,
+/area/golden_arrow/shared_office)
 "ccO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/corner/east,
@@ -13216,6 +13538,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"chz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "ciG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -13283,6 +13612,10 @@
 	pixel_x = -8;
 	pixel_y = 14
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
 "crq" = (
@@ -13344,6 +13677,18 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"cuH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	pixel_x = -6;
+	pixel_y = 3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "cuV" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -13409,6 +13754,45 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/hangar)
+"cAB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"cAY" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
+"cBJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
+"cCh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"cCl" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "cGQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -13463,6 +13847,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
+"cNv" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2";
+	pixel_y = 31
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "cOh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -13517,6 +13911,12 @@
 /turf/open/space/basic,
 /turf/open/floor/almayer,
 /area/space)
+"cYk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/sterile_green_side/southwest,
+/area/golden_arrow/medical)
 "daF" = (
 /obj/structure/machinery/door/poddoor/railing{
 	id = "garrow_elevator_upper"
@@ -13530,8 +13930,22 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"ddM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/hangar)
+"dfN" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
 "dfR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -13549,6 +13963,9 @@
 	},
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
 	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
@@ -13579,6 +13996,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"dsX" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "dtO" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1
@@ -13615,6 +14041,10 @@
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
+"dDb" = (
+/obj/structure/blocker/invisible_wall/directional,
+/turf/open/floor/almayer/no_build/plate,
+/area/golden_arrow/hangar)
 "dDk" = (
 /obj/structure/prop/almayer/ai_wallmonitor/east,
 /turf/open/floor/almayer/aicore/glowing,
@@ -13643,6 +14073,10 @@
 	pixel_x = 0;
 	pixel_y = 2
 	},
+/obj/item/clothing/glasses/night/medhud/no_nvg{
+	pixel_y = -9;
+	pixel_x = 6
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "dGg" = (
@@ -13654,6 +14088,28 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"dIF" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
+"dJx" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
+"dJU" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
+/turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/hangar)
 "dJV" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -13667,6 +14123,9 @@
 /area/golden_arrow/platoon_commander_rooms)
 "dLD" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "dLT" = (
@@ -13678,6 +14137,13 @@
 "dMj" = (
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/motor_pool)
+"dMv" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "dNf" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -13729,6 +14195,14 @@
 	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
+"dRc" = (
+/obj/structure/largecrate/random/case/double,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "dRK" = (
 /obj/item/clothing/accessory/stethoscope,
 /obj/item/clothing/accessory/stethoscope,
@@ -13761,11 +14235,15 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "dSe" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/uscm/north,
 /area/golden_arrow/platoon_commander_rooms)
 "dTR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo{
-	dir = 2
+	dir = 2;
+	req_one_access = null
 	},
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
@@ -13817,7 +14295,7 @@
 /obj/structure/phone_base{
 	pixel_y = 31;
 	name = "lower supply bay receiver";
-	phone_category = "Golden Arrow";
+	phone_category = "Blue Ridge";
 	phone_id = "Lower Supply Bay";
 	pixel_x = -6
 	},
@@ -13834,7 +14312,8 @@
 	},
 /obj/structure/closet/secure_closet/cmdcabinet{
 	pixel_y = 28;
-	pixel_x = -5
+	pixel_x = -5;
+	req_access = null
 	},
 /obj/item/device/cotablet,
 /obj/item/device/encryptionkey/bravo,
@@ -13855,6 +14334,17 @@
 /obj/item/device/encryptionkey/charlie,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"edo" = (
+/obj/structure/sign/poster/hero/voteno,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"edB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/prep_hallway)
 "efN" = (
 /obj/structure/platform,
 /turf/open/floor/almayer/orange/north,
@@ -13961,6 +14451,12 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/lower_cargo)
+"ewR" = (
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 1
+	},
+/turf/open/floor/almayer/no_build/plate,
+/area/golden_arrow/hangar)
 "exa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -13975,7 +14471,6 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "exb" = (
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/northwest,
 /area/space)
 "exH" = (
@@ -14076,6 +14571,10 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"eEX" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "eFT" = (
 /obj/item/paper/crumpled{
 	pixel_y = 17
@@ -14093,6 +14592,15 @@
 	layer = 2.7;
 	pixel_y = 5;
 	pixel_x = -4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoon_commander_rooms)
+"eFW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14131,8 +14639,14 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/hangar)
+"eJs" = (
+/obj/structure/sign/poster/propaganda,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/cryo_cells)
 "eJA" = (
-/obj/structure/machinery/light/small/blue/golden_arrow,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoonarmory)
 "eKk" = (
@@ -14169,10 +14683,24 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"eQU" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoon_commander_rooms)
+"eRP" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 1;
+	name = "Preps"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "eSr" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14196,6 +14724,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"eWD" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "eWO" = (
 /obj/item/stack/catwalk{
 	pixel_x = -6;
@@ -14210,6 +14748,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/motor_pool)
+"eXg" = (
+/obj/structure/sign/poster/io,
+/turf/closed/wall/almayer,
+/area/golden_arrow/shared_office)
 "fba" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1
@@ -14220,6 +14762,13 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
+"fbj" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 4;
+	brightness = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "fbw" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/almayer/test_floor5,
@@ -14252,6 +14801,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"fmB" = (
+/obj/structure/sign/poster/blacklight,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/platoonprep)
 "fne" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
@@ -14261,6 +14814,12 @@
 "fpt" = (
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
+"fqg" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "fqq" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/power/smes/buildable{
@@ -14290,6 +14849,10 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/hangar)
 "fvB" = (
@@ -14328,6 +14891,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"fCN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "fFO" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -14400,6 +14970,9 @@
 "fPI" = (
 /obj/structure/sign/prop1{
 	pixel_y = 32
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/floor,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14480,7 +15053,6 @@
 "fVz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/flashlight/lamp,
-/obj/item/clothing/glasses/hud/health,
 /obj/structure/machinery/computer/overwatch/almayer{
 	dir = 8;
 	layer = 3.2;
@@ -14507,12 +15079,24 @@
 "fWz" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/synthcloset)
+"fWZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/orange/north,
+/area/golden_arrow/platoonarmory)
 "fZd" = (
 /turf/closed/wall/almayer/outer/friegt,
 /area/golden_arrow/cargo_shuttle/lower)
 "fZz" = (
 /turf/open/floor/carpet/edge/north,
 /area/golden_arrow/platoon_commander_rooms)
+"gan" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "gaD" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -14521,8 +15105,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "gbz" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14541,6 +15124,22 @@
 /turf/open/space/basic,
 /turf/closed/wall/almayer/outer,
 /area/space)
+"gcK" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"gjb" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1;
+	name = "\improper Prep Lockers"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "gjs" = (
 /obj/structure/barricade/handrail,
 /obj/structure/reagent_dispensers/fueltank{
@@ -14593,7 +15192,8 @@
 "gqG" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
@@ -14690,8 +15290,27 @@
 /obj/effect/step_trigger/ares_alert/access_control,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"gFV" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/area/golden_arrow/cryo_cells)
+"gGm" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "Preps"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/supply)
 "gGG" = (
 /obj/structure/machinery/power/apc/power/north,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "gLu" = (
@@ -14703,7 +15322,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
@@ -14717,17 +15337,17 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "gOA" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_power = 0.5;
-	pixel_y = 10
+	pixel_x = -6;
+	pixel_y = 3;
+	brightness = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "gPu" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonprep)
@@ -14810,6 +15430,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"gUP" = (
+/obj/structure/closet/crate,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/almayer/cargo,
+/area/golden_arrow/supply)
 "gVg" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -14820,6 +15447,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"gWp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/prep_hallway)
 "gWx" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/space/basic,
@@ -14869,8 +15505,20 @@
 	pixel_x = -10;
 	layer = 3.6
 	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8;
+	brightness = 7
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_commander_rooms)
+"hfv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "hhG" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay One Blast Door";
@@ -14896,8 +15544,7 @@
 /area/golden_arrow/hangar)
 "hlN" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -14925,7 +15572,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -14961,7 +15609,8 @@
 /obj/structure/machinery/door/airlock/almayer/marine/requisitions{
 	dir = 2;
 	no_panel = 1;
-	not_weldable = 1
+	not_weldable = 1;
+	req_one_access = null
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
@@ -14981,6 +15630,17 @@
 "hCn" = (
 /turf/open/floor/almayer/edge/smooth/endcap_right/east,
 /area/golden_arrow/platoonprep)
+"hDj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 8;
+	brightness = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "hFA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair{
@@ -14998,8 +15658,18 @@
 "hGr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
+"hHu" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/strata/fake_wood,
+/area/golden_arrow/platoon_commander_rooms)
 "hIP" = (
 /turf/open/floor/carpet/edge/northwest,
 /area/golden_arrow/platoon_commander_rooms)
@@ -15013,12 +15683,32 @@
 /obj/structure/cargo_container/grant/right,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
+"hJs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "hKW" = (
 /obj/item/device/megaphone,
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/whistle,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = -1;
+	brightness = 7
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"hMo" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/area/golden_arrow/cryo_cells)
 "hMX" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door"
@@ -15036,6 +15726,16 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/lower_cargo)
+"hQu" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "hRK" = (
 /obj/effect/decal/strata_decals/grime/grime3,
 /obj/structure/bed/chair/comfy/bench/north,
@@ -15069,6 +15769,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "hUm" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/uscm/directional/up_down/west,
 /area/golden_arrow/platoon_commander_rooms)
 "hUp" = (
@@ -15081,6 +15784,12 @@
 	},
 /turf/open/floor/almayer/emerald/east,
 /area/golden_arrow/platoon_commander_rooms)
+"hUD" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoon_commander_rooms)
 "hVa" = (
 /obj/structure/platform,
 /obj/structure/cable/heavyduty{
@@ -15088,12 +15797,36 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/motor_pool)
+"hVt" = (
+/obj/structure/sign/poster,
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
 "hVV" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
+"hWJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonarmory)
+"hXb" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/emerald/north,
+/area/golden_arrow/platoonarmory)
+"hXn" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "hZw" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3
+	brightness = 9
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
@@ -15117,7 +15850,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/lower_cargo)
@@ -15190,8 +15924,17 @@
 /turf/open/floor/almayer/aicore,
 /area/golden_arrow/ai_interface)
 "iqJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/uscm/directional/up_down/east,
 /area/golden_arrow/platoon_commander_rooms)
+"isE" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
 "itW" = (
 /obj/docking_port/stationary/trijent_elevator/shipmap_elevator/cargo{
 	id = "garrow_cargo_elevator_storage";
@@ -15203,12 +15946,19 @@
 	},
 /turf/open/floor/corsat,
 /area/golden_arrow/cargo_shuttle/lower)
+"ivb" = (
+/obj/structure/sign/poster,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/cryo_cells)
 "ivd" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonprep)
 "ivM" = (
 /obj/structure/platform,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
 "izv" = (
@@ -15253,6 +16003,10 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/lower_cargo)
+"iBT" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
 "iDd" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15273,6 +16027,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"iIL" = (
+/obj/effect/decal/medical_decals{
+	icon_state = "triagedecaldir";
+	dir = 2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "iJr" = (
 /turf/open/floor/carpet/edge,
 /area/golden_arrow/platoon_commander_rooms)
@@ -15280,6 +16044,12 @@
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
 /area/golden_arrow/dorms)
+"iLC" = (
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "iLR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -15293,6 +16063,15 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"iMz" = (
+/obj/structure/blocker/forcefield/vehicles{
+	layer = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/platoonarmory)
 "iNc" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/faxmachine/uscm/command/capt{
@@ -15351,6 +16130,12 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"iRn" = (
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/platoonprep)
+"iTf" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/medical)
 "iTu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -15358,7 +16143,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15411,6 +16197,25 @@
 	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
+"iYu" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"jbd" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = -11;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "jbv" = (
 /obj/structure/machinery/computer/secure_data/noaccess{
 	dir = 4
@@ -15455,6 +16260,10 @@
 /obj/structure/machinery/cm_vending/gear/synth,
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"jjW" = (
+/obj/structure/sign/poster/ad,
+/turf/closed/wall/almayer,
+/area/golden_arrow/supply)
 "jlb" = (
 /obj/structure/cargo_container/uscm/chinook/mid{
 	color = "#898988";
@@ -15471,9 +16280,20 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
+"jpa" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	brightness = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "jpb" = (
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"jpt" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/emerald,
+/area/golden_arrow/platoonarmory)
 "jqA" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
@@ -15499,6 +16319,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"jCa" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/red,
+/area/golden_arrow/platoonarmory)
 "jDt" = (
 /obj/structure/machinery/power/terminal{
 	dir = 4
@@ -15547,11 +16371,18 @@
 /area/golden_arrow/engineering)
 "jMD" = (
 /obj/structure/window/framed/almayer/hull,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 8
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "CIC Shutters";
+	dir = 4
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"jNs" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "jPJ" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15562,6 +16393,18 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"jQt" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"jRt" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	brightness = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "jSb" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15648,9 +16491,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/golden_arrow/platoon_commander_rooms)
 "kbQ" = (
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir,
 /area/space)
+"kcE" = (
+/obj/structure/sign/poster/ad,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "kdA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -15663,6 +16509,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"kdD" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "kgw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -15697,7 +16550,6 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
 "kjn" = (
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/north,
 /area/space)
 "knD" = (
@@ -15716,6 +16568,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"kob" = (
+/obj/structure/sign/poster/hero/voteno,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/supply)
 "koN" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15736,6 +16592,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"ktk" = (
+/obj/structure/sign/poster/safety,
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
 "kwe" = (
 /obj/structure/machinery/door_control{
 	id = "lowerstorage6";
@@ -15756,6 +16616,13 @@
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
+"kzo" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "kBG" = (
 /obj/structure/closet/crate,
 /turf/open/floor/almayer/cargo,
@@ -15770,7 +16637,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -15872,6 +16740,15 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"kUi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "kUu" = (
 /obj/structure/platform{
 	dir = 4;
@@ -15883,8 +16760,11 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
 "kVV" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
 	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
@@ -15896,6 +16776,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
+"kXF" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	pixel_x = 0;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonarmory)
 "kXG" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	pixel_x = -1
@@ -15913,14 +16808,44 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"kZD" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "laE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
+"lcZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
+"ler" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/platoonprep)
 "lff" = (
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
+"lgp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
+"liQ" = (
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/prep_hallway)
 "ljO" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "lkM" = (
@@ -15935,6 +16860,12 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
+"lmC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonarmory)
 "lov" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -15948,7 +16879,7 @@
 /obj/structure/phone_base{
 	pixel_y = 31;
 	name = "engineering receiver";
-	phone_category = "Golden Arrow";
+	phone_category = "Blue Ridge";
 	phone_id = "Engineering";
 	pixel_x = -5
 	},
@@ -16009,6 +16940,10 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"lwW" = (
+/obj/structure/sign/poster/art,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "lyc" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
 	req_one_access = null
@@ -16046,6 +16981,21 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
+"lBJ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 10
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 14;
+	pixel_x = 0
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonarmory)
 "lCv" = (
 /obj/item/hardpoint/primary/arc_frontalcannon{
 	pixel_y = -15;
@@ -16095,6 +17045,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
+"lGi" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "lGH" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -16146,6 +17102,13 @@
 "lID" = (
 /turf/open/floor/almayer/floor,
 /area/golden_arrow/platoon_commander_rooms)
+"lIK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "lJP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/phone_base/rotary/no_dnd{
@@ -16160,6 +17123,10 @@
 	pixel_x = -4;
 	pixel_y = 9;
 	layer = 3.4
+	},
+/obj/item/clothing/glasses/night/medhud/no_nvg{
+	pixel_y = -8;
+	pixel_x = -5
 	},
 /turf/open/floor/almayer/blue/southwest,
 /area/golden_arrow/platoon_commander_rooms)
@@ -16203,7 +17170,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
@@ -16282,6 +17250,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"lRz" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/platoonarmory)
+"lSg" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/hangar)
 "lTe" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -16322,6 +17298,12 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"lWp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "lXR" = (
 /obj/structure/platform{
 	dir = 4;
@@ -16336,6 +17318,14 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
+"lYl" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/floor,
+/area/golden_arrow/platoonarmory)
+"lYB" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "lYO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -16389,6 +17379,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
+"meR" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/hangar)
 "mgN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -16399,6 +17395,10 @@
 /obj/effect/landmark/start/marine/tl/charlie,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"mgZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange/north,
+/area/golden_arrow/platoonarmory)
 "mhB" = (
 /obj/structure/toilet{
 	dir = 4
@@ -16416,6 +17416,13 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
+"mkS" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "mla" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16454,8 +17461,13 @@
 /turf/open/floor/almayer_hull/outerhull_dir/east,
 /area/space)
 "moi" = (
-/obj/structure/machinery/light/small/blue/golden_arrow,
 /obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "moW" = (
@@ -16476,7 +17488,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/synthcloset)
 "mpM" = (
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/west,
 /area/space)
 "mrG" = (
@@ -16486,6 +17497,9 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"mtf" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/platoonarmory)
 "mtK" = (
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/platoonarmory)
@@ -16498,12 +17512,19 @@
 	pixel_x = 0;
 	pixel_y = 2
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "mvk" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16555,7 +17576,6 @@
 "mFD" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_power = 0.7;
 	pixel_x = -6;
 	pixel_y = 3
 	},
@@ -16625,6 +17645,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"mJJ" = (
+/obj/structure/window/framed/almayer/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "CIC Shutters"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/platoon_commander_rooms)
 "mKI" = (
 /obj/structure/curtain/medical,
 /turf/open/floor/almayer/sterile_green,
@@ -16685,11 +17712,40 @@
 	},
 /turf/open/floor/corsat,
 /area/golden_arrow/motor_pool)
+"mNx" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3";
+	pixel_y = -12
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "mQb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/overwatch/almayer,
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoon_commander_rooms)
+"mQG" = (
+/obj/structure/sign/poster/hero/voteno,
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
+"mQH" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	brightness = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/dorms)
 "mSK" = (
 /obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
@@ -16700,11 +17756,43 @@
 "mWO" = (
 /obj/structure/prop/almayer/computers/mapping_computer,
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 1
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"mWY" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/tray{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/tool/kitchen/tray{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/tool/kitchen/tray{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = -3;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = -11;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "mXq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -16717,7 +17805,8 @@
 /area/golden_arrow/cryo_cells)
 "mZk" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25
+	light_power = 0.25;
+	brightness = 7
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
@@ -16741,6 +17830,12 @@
 "nex" = (
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/platoonprep)
+"neU" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/strata/fake_wood,
+/area/golden_arrow/platoon_commander_rooms)
 "nfP" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	req_one_access_txt = "8;12;39;40";
@@ -16759,7 +17854,7 @@
 "ngb" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -16799,9 +17894,12 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "nnZ" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.5;
-	dir = 1
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
 	},
 /turf/open/floor/almayer/orange/north,
 /area/golden_arrow/platoonarmory)
@@ -16860,9 +17958,24 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"nvd" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = -14
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "nxj" = (
-/obj/structure/machinery/door/airlock/almayer/secure,
-/turf/open/floor/plating,
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "nyU" = (
 /obj/structure/bed/chair{
@@ -16936,10 +18049,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
 "nIL" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.5;
-	pixel_y = 10
+	brightness = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -16982,6 +18094,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"nSb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "nUJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -17003,6 +18122,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/platoonarmory)
 "nXv" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/redcorner/north,
 /area/golden_arrow/platoonarmory)
 "nXP" = (
@@ -17015,6 +18135,12 @@
 /obj/structure/cargo_container/grant/rightmid,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
+"ocv" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/floor,
+/area/golden_arrow/platoon_commander_rooms)
 "ocy" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -17077,6 +18203,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"ohn" = (
+/obj/effect/decal/medical_decals{
+	icon_state = "triagedecaldir";
+	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "ojW" = (
 /obj/structure/gun_rack/m41/unloaded,
 /turf/open/floor/almayer/plate,
@@ -17115,6 +18251,19 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/motor_pool)
+"omk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
+"onb" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "onj" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/sterile_green_side,
@@ -17135,6 +18284,10 @@
 "opj" = (
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/lower_cargo)
+"orE" = (
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "osR" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Two Blast Door";
@@ -17153,6 +18306,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/golden_arrow/ai_interface)
+"otR" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/golden_arrow/hangar)
 "ouH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -17203,6 +18362,13 @@
 "ozg" = (
 /turf/closed/wall/almayer/white/hull,
 /area/golden_arrow/medical)
+"ozQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "oCT" = (
 /obj/structure/supply_drop/delta,
 /obj/structure/platform{
@@ -17226,7 +18392,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
@@ -17254,7 +18421,15 @@
 	pixel_y = 0
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/blocker/forcefield/human,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7;
+	layer = 2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_commander_rooms)
 "oMx" = (
@@ -17360,6 +18535,14 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"pbH" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.6;
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
 "pce" = (
 /turf/open/floor/almayer/uscm/directional/up_down,
 /area/golden_arrow/platoon_commander_rooms)
@@ -17375,6 +18558,14 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/supply)
+"peG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "pfC" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/toolbox/electrical{
@@ -17383,7 +18574,27 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"pfE" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	brightness = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/dorms)
 "piN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoonprep)
 "plY" = (
@@ -17400,6 +18611,16 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"pqK" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 25
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
 "prm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -17410,6 +18631,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"psZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 25
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
 "ptw" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
@@ -17464,6 +18695,32 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"pAf" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/obj/item/trash/USCMtray{
+	pixel_y = 2
+	},
+/obj/item/trash/USCMtray{
+	pixel_y = 6
+	},
+/obj/item/trash/USCMtray{
+	pixel_y = 10
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"pBu" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "pCI" = (
 /obj/structure/platform,
 /obj/structure/disposalpipe/segment{
@@ -17520,22 +18777,11 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
 "pKJ" = (
-/obj/structure/window/framed/almayer/white/hull,
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "Medical Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "or1privacyshutter"
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "Medical Bay";
-	id = "cargolockswest";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/medical)
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "pKQ" = (
 /obj/structure/machinery/disposal{
 	pixel_x = 0;
@@ -17546,14 +18792,23 @@
 /area/golden_arrow/platoonarmory)
 "pLu" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 4
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"pPl" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "pPo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/dorms)
 "pPt" = (
@@ -17595,6 +18850,13 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"pRq" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "pRt" = (
 /obj/structure/noticeboard{
 	pixel_y = 30;
@@ -17608,6 +18870,13 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
+"pSr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "pSQ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/head/helmet/marine/rto{
@@ -17617,6 +18886,10 @@
 /obj/item/attachable/scope/pve{
 	pixel_x = 3;
 	pixel_y = -1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
@@ -17643,6 +18916,25 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"pVB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/hangar)
+"pVF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
+"pVZ" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "pWS" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -17706,6 +18998,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"qcp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "qcH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -17726,6 +19024,12 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"qfr" = (
+/obj/structure/blocker/invisible_wall/directional{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "qft" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -17787,6 +19091,18 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
+"qjP" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
+	dir = 2;
+	name = "\improper Medical Main Lobby";
+	req_access = null;
+	req_one_access = null
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/medical)
 "qkx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -17800,6 +19116,10 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"qkT" = (
+/obj/structure/sign/poster/propaganda,
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
 "qlw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -17838,6 +19158,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"qnN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"qwe" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoonprep)
 "qwr" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -17892,8 +19225,7 @@
 /area/golden_arrow/lower_cargo)
 "qGV" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -17905,6 +19237,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"qJY" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
+	dir = 2;
+	id_tag = "tc02";
+	name = "\improper Treatment Center";
+	req_access = null;
+	req_one_access = null
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/medical)
 "qNR" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -17935,6 +19280,14 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"qQi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "qQG" = (
 /obj/structure/sign/safety/one{
 	pixel_x = 39
@@ -18008,6 +19361,24 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
+"qWQ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/east,
+/area/golden_arrow/platoonprep)
+"qYK" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "qZf" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
@@ -18066,6 +19437,12 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
+"rfp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "rhh" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo/yellow{
 	dir = 2
@@ -18097,10 +19474,17 @@
 "rij" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/lower_cargo)
+"rjq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
 "rkd" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -18110,6 +19494,16 @@
 "rll" = (
 /turf/open/floor/almayer/uscm/directional/up_down/east,
 /area/golden_arrow/prep_hallway)
+"rlm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/east,
+/area/golden_arrow/hangar)
 "rmN" = (
 /obj/structure/bed/chair{
 	buckling_y = 6;
@@ -18151,6 +19545,41 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
+"rsL" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"rsT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
+"rue" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_one_access_txt = "8;12;39;40";
+	req_access = list();
+	pixel_x = 0;
+	pixel_y = -29;
+	density = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoonarmory)
 "rwd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -18203,14 +19632,6 @@
 /obj/structure/blocker/forcefield/vehicles{
 	layer = 5
 	},
-/obj/structure/machinery/door/poddoor/almayer/open{
-	dir = 4;
-	name = "Medical Bay Blast Door";
-	closed_layer = 3.3;
-	layer = 3.3;
-	open_layer = 3.3;
-	id = "or1privacyshutter"
-	},
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "Medical Bay";
 	id = "cargolockswest";
@@ -18242,6 +19663,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"rBV" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "rEz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -18249,7 +19679,9 @@
 	},
 /obj/structure/machinery/prop/almayer/CICmap/upp,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/blocker/forcefield/human,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/platoon_commander_rooms)
 "rMy" = (
@@ -18356,8 +19788,9 @@
 	pixel_y = 7
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 1
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/platoon_commander_rooms)
@@ -18379,10 +19812,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"rWU" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "rYB" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 8;
-	light_power = 0.7
+	dir = 8
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -18405,6 +19844,36 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/supply)
+"saH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4;
+	pixel_x = 2
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/west,
+/area/golden_arrow/hangar)
+"scv" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
+"scL" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = -14
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/area/golden_arrow/platoonprep)
 "sdp" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/almayer/plate,
@@ -18419,6 +19888,12 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
+"sgi" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "sgR" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -18482,6 +19957,16 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/motor_pool)
+"sie" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/supply)
 "skM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -18516,6 +20001,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"smo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/sterile_green_side,
+/area/golden_arrow/medical)
 "smL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -18590,6 +20082,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"sts" = (
+/obj/structure/sign/poster/hero,
+/turf/closed/wall/almayer/white,
+/area/golden_arrow/medical)
 "suA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -18642,24 +20138,21 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/supply)
-"sCf" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_y = 1
+"szd" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 8;
-	dir = 8
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
-	layer = 2.97;
-	pixel_y = -4
-	},
-/turf/open/floor/almayer/plate,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"sCf" = (
+/obj/structure/blocker/invisible_wall{
+	opacity = 1
+	},
+/turf/open/space/basic,
+/area/space)
 "sCG" = (
 /obj/structure/platform_decoration,
 /obj/effect/decal/cleanable/dirt{
@@ -18687,6 +20180,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"sLj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/hangar)
 "sMB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -18715,6 +20215,15 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/lower_cargo)
+"sRD" = (
+/obj/structure/blocker/invisible_wall{
+	opacity = 1
+	},
+/obj/structure/blocker/invisible_wall{
+	opacity = 1
+	},
+/turf/open/space/basic,
+/area/space)
 "sTA" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8;
@@ -18733,6 +20242,35 @@
 	},
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/engineering)
+"sUi" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/platoonprep)
+"sVp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"sVN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/hangar)
+"tam" = (
+/obj/item/device/flashlight/lamp/tripod{
+	pixel_y = 15
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "tcj" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/structure/machinery/door/window/westleft,
@@ -18742,7 +20280,7 @@
 "tcu" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -18767,7 +20305,8 @@
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 4
+	dir = 4;
+	brightness = 7
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
@@ -18812,6 +20351,20 @@
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"tky" = (
+/obj/structure/blocker/forcefield/vehicles{
+	layer = 5
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/platoonarmory)
+"tkG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "tkO" = (
 /turf/open/floor/almayer/uscm/directional/up_down,
 /area/golden_arrow/prep_hallway)
@@ -18826,12 +20379,22 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
+"toU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
 "tsK" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
 	light_color = "#dae2ff";
 	layer = 2.97
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -18874,6 +20437,7 @@
 	icon_state = "SW-out";
 	pixel_y = -1
 	},
+/obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "twa" = (
@@ -18904,6 +20468,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
+"twr" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/golden_arrow/hangar)
 "txJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -18965,6 +20533,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
+"tDC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 25
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
 "tEc" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18992,6 +20570,10 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
+"tIW" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "tJa" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -19025,6 +20607,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"tNp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "tNt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -19034,8 +20626,8 @@
 /area/golden_arrow/engineering)
 "tNB" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 4
+	dir = 4;
+	brightness = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/prep_hallway)
@@ -19045,13 +20637,21 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
+"tNU" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
 "tRe" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
-	dir = 8
+	dir = 8;
+	brightness = 7
 	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/lower_cargo)
@@ -19073,6 +20673,12 @@
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/motor_pool)
+"tVW" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "tXf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/sterile_green_side/north,
@@ -19085,6 +20691,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
+"ucz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
+"udf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
 "udy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -19103,6 +20720,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"uhH" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "ujj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -19161,6 +20784,38 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
+"umK" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_x = 12;
+	pixel_y = 18
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 18;
+	pixel_x = 2
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 4;
+	pixel_x = 12
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 17;
+	pixel_x = -8
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"uoi" = (
+/obj/structure/blocker/invisible_wall/directional,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "uqv" = (
 /obj/structure/machinery/light/small/red,
 /obj/effect/decal/cleanable/dirt{
@@ -19168,6 +20823,12 @@
 	},
 /turf/open/floor/almayer/plating_striped/north,
 /area/golden_arrow/engineering)
+"uss" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "uto" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -19182,6 +20843,10 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"uwa" = (
+/obj/structure/sign/poster,
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
 "uwt" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -19259,7 +20924,6 @@
 /area/golden_arrow/platoonprep)
 "uPo" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/space/basic,
 /turf/open/floor/almayer_hull/outerhull_dir/west,
 /area/space)
 "uPR" = (
@@ -19281,9 +20945,18 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
+"uQh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "uRq" = (
 /obj/structure/platform{
 	layer = 2.78
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -19303,6 +20976,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
+"uUB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 25
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/hangar)
 "uVo" = (
 /obj/structure/platform{
 	dir = 4;
@@ -19330,6 +21013,12 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/golden_arrow/platoon_commander_rooms)
+"uXq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "uXF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -19372,11 +21061,6 @@
 	layer = 3.2;
 	pixel_y = 12
 	},
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.5;
-	dir = 1;
-	pixel_y = 12
-	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
 "vig" = (
@@ -19415,8 +21099,9 @@
 	pixel_y = 8
 	},
 /obj/structure/machinery/light/small/blue/golden_arrow{
-	light_power = 0.25;
-	dir = 1
+	dir = 1;
+	pixel_y = 5;
+	brightness = 7
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/platoon_commander_rooms)
@@ -19475,6 +21160,9 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/lower_cargo)
+"vra" = (
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/platoonprep)
 "vrD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -19485,6 +21173,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
+"vtX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/orange,
+/area/golden_arrow/platoonarmory)
 "vzH" = (
 /obj/structure/barricade/handrail,
 /obj/structure/disposalpipe/segment,
@@ -19594,6 +21289,10 @@
 "vOX" = (
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"vPo" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonarmory)
 "vPN" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
@@ -19609,6 +21308,20 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"vQf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	pixel_x = -6;
+	pixel_y = 3;
+	brightness = 9
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "vQy" = (
 /obj/structure/cargo_container/kelland/left{
 	pixel_x = 0;
@@ -19619,6 +21332,34 @@
 "vRh" = (
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
+"vSC" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 4;
+	name = "First Platoon Ready Bay Blast Door";
+	closed_layer = 3.3;
+	layer = 3.3;
+	open_layer = 3.3;
+	id = "squadblastdoor"
+	},
+/obj/structure/blocker/forcefield/vehicles{
+	layer = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/platoonarmory)
+"vSP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"vXj" = (
+/obj/structure/sign/poster/music,
+/turf/closed/wall/almayer,
+/area/golden_arrow/shared_office)
 "vXI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box{
@@ -19660,6 +21401,12 @@
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
+"wcE" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/golden_arrow/platoonprep)
 "wdE" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/almayer,
@@ -19692,6 +21439,26 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
+"wiX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_left/west,
+/area/golden_arrow/cryo_cells)
+"wkn" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	brightness = 9
+	},
+/turf/open/floor/almayer/emerald/north,
+/area/golden_arrow/platoonarmory)
+"wkW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "wld" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Cargo Elevator Blast Door";
@@ -19699,8 +21466,18 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"wmA" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door";
+	id = "cargolockswest";
+	dir = 4
+	},
+/turf/closed/wall/almayer/outer{
+	opacity = 0
+	},
+/area/golden_arrow/hangar)
 "wmF" = (
-/turf/open/floor/almayer/edge/smooth/endcap_right/west,
+/turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/prep_hallway)
 "wmG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -19711,6 +21488,11 @@
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
+"wnK" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/item/device/flashlight/lamp/tripod,
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/golden_arrow/hangar)
 "woR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -19732,6 +21514,15 @@
 	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
+"wxg" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/prep_hallway)
 "wAd" = (
 /obj/vehicle/powerloader{
 	dir = 1
@@ -19959,6 +21750,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "wSY" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 4;
+	brightness = 9
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
 "wWc" = (
@@ -20030,6 +21826,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
+"wZs" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/golden_arrow/hangar)
 "xan" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -20056,6 +21861,15 @@
 	},
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
+"xcu" = (
+/obj/effect/decal/medical_decals{
+	icon_state = "triagedecaldir"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/medical)
 "xcJ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
@@ -20068,6 +21882,16 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
+"xjd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
 "xjm" = (
 /obj/structure/window/framed/almayer,
 /turf/open/floor/plating,
@@ -20141,6 +21965,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"xCw" = (
+/obj/structure/sign/poster/hunk,
+/turf/closed/wall/almayer,
+/area/golden_arrow/dorms)
 "xDO" = (
 /obj/structure/machinery/door_control{
 	id = "lowervehiclebay1";
@@ -20157,9 +21985,11 @@
 /turf/open/floor/almayer/mono,
 /area/space)
 "xDV" = (
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	pixel_y = -1;
-	light_power = 0.5
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
@@ -20202,6 +22032,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
+"xIp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "xIP" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Six Blast Door";
@@ -20232,6 +22069,21 @@
 	},
 /turf/open/floor/almayer/emerald/southeast,
 /area/golden_arrow/supply)
+"xLT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "node";
+	layer = 2.38;
+	pixel_x = -1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = -14
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "xOB" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -20239,6 +22091,15 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"xPe" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
+"xQC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/golden_arrow/prep_hallway)
 "xTf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/north,
@@ -20279,6 +22140,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
+"yaj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
 "ydL" = (
 /obj/structure/machinery/cm_vending/clothing/synth/snowflake,
 /turf/open/floor/almayer/test_floor5,
@@ -20292,6 +22157,13 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
+"yes" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/platoon_commander_rooms)
 "yfa" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20338,6 +22210,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
+"yjy" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ylw" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
 
 (1,1,1) = {"
 aEG
@@ -22753,13 +24635,13 @@ aRd
 aRd
 aRd
 aRd
-ala
+aRq
 aRd
 acO
 adt
 aRd
 aRd
-ala
+aRq
 aRd
 aRd
 adt
@@ -23632,7 +25514,7 @@ aEG
 aWh
 lCL
 oPL
-sCf
+exa
 acQ
 oPL
 prm
@@ -23644,7 +25526,7 @@ akE
 aSB
 oPL
 aSB
-sCf
+exa
 aIf
 oPL
 oPL
@@ -23807,7 +25689,7 @@ aEG
 aEG
 aEG
 aWh
-auV
+xan
 aAK
 aKr
 aAK
@@ -24708,7 +26590,7 @@ aJU
 adW
 asE
 adW
-ajy
+adW
 abx
 aJU
 aBk
@@ -24998,6 +26880,17 @@ aEG
 aEG
 aEG
 aEG
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -25034,18 +26927,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aWh
+eJs
 aam
 apA
 apm
@@ -25175,7 +27057,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -25235,7 +27117,7 @@ aAv
 aTn
 aeM
 aog
-gDf
+qYK
 aBk
 axf
 aBk
@@ -25352,6 +27234,7 @@ aEG
 aEG
 aEG
 aEG
+sCf
 aEG
 aEG
 aEG
@@ -25364,24 +27247,23 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
 aeC
 aeC
 aeC
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
 aeC
 tBI
 aeC
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
 aEG
 aEG
 aEG
@@ -25529,7 +27411,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -25545,38 +27427,38 @@ aEG
 aqf
 abl
 aDj
-aqf
+ahl
 aJq
 aJq
 aJq
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
 aJq
 aaj
 aJq
 abl
 aDj
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
 aRI
 aRI
 aRI
-aWh
+ivb
 aSR
 awW
 apm
@@ -25706,9 +27588,9 @@ aEG
 aEG
 aEG
 aEG
+sCf
 aEG
 aEG
-aEG
 bBB
 bBB
 bBB
@@ -25718,24 +27600,24 @@ bBB
 bBB
 bBB
 bBB
-aqf
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
+ahl
 ijg
 ijg
 ijg
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
 ijg
 aWi
 ijg
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
 ato
 ezt
 aan
@@ -25749,7 +27631,7 @@ atH
 aIb
 aRl
 aum
-aqf
+ahl
 aWh
 aWh
 aWh
@@ -25883,7 +27765,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 ife
@@ -25901,12 +27783,12 @@ axk
 uJn
 aum
 aaZ
-afz
+apS
 afz
 aeg
 aum
 ahg
-afz
+tam
 afz
 afz
 afz
@@ -25926,26 +27808,26 @@ ayV
 atG
 amB
 sdp
-aqf
+ahl
 aWh
 avH
 ael
 aog
 aiU
 aLK
-aLK
+wiX
 avj
 akO
-aUN
+gFV
 avj
 adW
-adW
+hMo
 adW
 adW
 rYB
 adW
 adW
-adW
+hMo
 adW
 adW
 aUN
@@ -26060,7 +27942,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 cUo
@@ -26072,7 +27954,7 @@ aEK
 aEK
 bBB
 bBB
-afz
+pVZ
 afz
 agH
 uJn
@@ -26103,14 +27985,14 @@ aJB
 aVc
 abY
 aum
-aqf
+ahl
 aWh
 ari
 aOu
 aFW
 axh
 arr
-aBk
+uXq
 aBk
 aht
 aRo
@@ -26237,7 +28119,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -26280,14 +28162,14 @@ aVO
 aYl
 apD
 aum
-aqf
+ahl
 aWh
 apx
 aQw
 aHd
 aog
 arr
-aBk
+uXq
 aBk
 aKk
 ahK
@@ -26414,7 +28296,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -26427,7 +28309,7 @@ aEK
 daF
 abf
 afz
-afz
+apS
 dhv
 abC
 atI
@@ -26447,7 +28329,7 @@ pDh
 aer
 aum
 aum
-aum
+acz
 ada
 aQe
 agf
@@ -26457,7 +28339,7 @@ aCz
 aqS
 anY
 aPt
-aqf
+ahl
 aWh
 afI
 aaJ
@@ -26591,7 +28473,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -26609,7 +28491,7 @@ ass
 abC
 aCR
 afz
-afz
+aVO
 aum
 aum
 abn
@@ -26626,7 +28508,7 @@ aum
 aum
 aum
 ada
-aBQ
+hDj
 axV
 auT
 aHM
@@ -26634,14 +28516,14 @@ afz
 aav
 abL
 aYh
-aqf
+ahl
 aWh
 aaN
 aaJ
 aHd
-aog
+uwa
 arr
-aBk
+uXq
 aBk
 aht
 aCB
@@ -26768,7 +28650,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -26806,19 +28688,19 @@ lPj
 aCl
 afz
 afz
-afz
+apS
 afz
 ako
 amq
 aKG
-aqf
+ahl
 aWh
 aWh
 aWh
 aWh
 aWh
 gkN
-ajF
+lIK
 aBk
 aKk
 aCB
@@ -26945,7 +28827,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -26957,7 +28839,7 @@ aEK
 aEK
 bBB
 bBB
-afz
+pVZ
 afz
 afz
 abC
@@ -26974,12 +28856,12 @@ aXH
 afz
 jHP
 adU
-atW
+tNp
 caX
 aum
 aum
 aum
-ada
+mNx
 rBG
 afz
 afz
@@ -26988,14 +28870,14 @@ afz
 afz
 anb
 arW
-aqf
+ahl
 aYG
 aYG
 aYG
 aWh
 fSy
 aBk
-aBk
+uXq
 aBk
 aKk
 ahK
@@ -27122,7 +29004,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 ife
@@ -27136,7 +29018,7 @@ ife
 gjM
 afz
 afz
-afz
+uss
 uJn
 aum
 aum
@@ -27154,25 +29036,25 @@ jHP
 atW
 caX
 kNU
-aum
+acz
 aum
 ada
 aBQ
 apS
 afz
 alV
-afz
+aVO
 aWb
 afz
 aYR
-aqf
+ahl
 aYG
 aYG
 aYG
 aWh
 ajq
 aBk
-aBk
+uXq
 aBk
 aBk
 aBk
@@ -27299,7 +29181,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 bBB
@@ -27313,7 +29195,7 @@ bBB
 bBB
 aum
 aum
-aum
+acz
 uJn
 oFX
 uJn
@@ -27323,7 +29205,7 @@ fUr
 aEl
 aum
 aRe
-afz
+lwW
 aDS
 afz
 acD
@@ -27342,14 +29224,14 @@ ajc
 ajm
 afz
 aau
-aqf
+ahl
 aYG
 aYG
 aYG
 aWh
 axj
 aBk
-ajF
+hJs
 aBk
 aPf
 aPf
@@ -27476,6 +29358,7 @@ aEG
 aEG
 aEG
 aEG
+sCf
 aEG
 aEG
 aEG
@@ -27486,8 +29369,7 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aqf
+ahl
 aUd
 afz
 axG
@@ -27518,29 +29400,29 @@ afz
 afz
 apS
 afz
-aum
-aqf
+jRt
+ahl
 aYG
 aYG
 aYG
 aWh
 aQJ
 aBk
-ajF
+lIK
 aBk
-ahK
+aRo
 aZr
 arj
 aBk
 aVk
 aBk
-ahK
+jbd
 aZr
 arj
 aBk
 aVk
 aBk
-ahK
+jbd
 aZr
 arj
 aBk
@@ -27567,6 +29449,7 @@ afv
 afv
 afv
 afv
+xCw
 afv
 afv
 afv
@@ -27576,8 +29459,7 @@ afv
 afv
 afv
 afv
-afv
-afv
+mQG
 afv
 afv
 arC
@@ -27653,18 +29535,18 @@ aEG
 aEG
 aEG
 aEG
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
 aEG
 aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aqf
+kob
 aDs
 afz
 aJv
@@ -27694,16 +29576,16 @@ afz
 afz
 atA
 afz
-afz
+aVO
 aMl
-aqf
+ahl
 aYG
 aYG
 aYG
 aWh
 aog
 aak
-aBk
+uXq
 aBk
 anG
 aUc
@@ -27841,7 +29723,7 @@ aEG
 aEG
 aEG
 aEG
-aqf
+ahl
 axt
 afz
 afz
@@ -27855,7 +29737,7 @@ afz
 afz
 afz
 afz
-afz
+aVO
 afz
 afz
 jHP
@@ -27873,26 +29755,26 @@ ana
 ana
 aoj
 aNR
-aqf
+ahl
 aYG
 aYG
 aYG
 aWh
 aog
 aiK
-aBk
-ajF
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
-aBk
+uQh
+xIp
+bZB
+bZB
+bZB
+bZB
+szd
+bZB
+bZB
+bZB
+bZB
+bZB
+gan
 aBk
 aBk
 aBk
@@ -27905,7 +29787,7 @@ nLR
 rPa
 aog
 aWh
-afv
+hVt
 aJa
 arG
 aGx
@@ -28007,9 +29889,9 @@ aEG
 aEG
 aEG
 aEG
-exb
-mpM
-mpM
+aEG
+aEG
+aEG
 aEG
 aDh
 aDh
@@ -28018,15 +29900,15 @@ aDh
 aDh
 aDh
 aDh
-aqf
+ahl
 amb
 afz
+apS
 afz
 afz
-afz
-kBG
-uJn
-aum
+gUP
+jjW
+rWU
 afz
 afz
 afz
@@ -28050,7 +29932,7 @@ akg
 mSK
 pcJ
 aum
-aqf
+ahl
 aYG
 aYG
 aYG
@@ -28069,7 +29951,7 @@ aBk
 acH
 aBk
 ajF
-aBk
+uXq
 ajF
 ajF
 aBk
@@ -28089,7 +29971,7 @@ aZV
 ayw
 aKi
 aMe
-afv
+hVt
 aai
 auL
 fFO
@@ -28185,8 +30067,8 @@ aEG
 aEG
 aEG
 aEG
-exb
-aDr
+aEG
+aEG
 aEG
 aDh
 aDh
@@ -28195,7 +30077,7 @@ aDh
 hdV
 xXR
 jbv
-aqf
+ahl
 oCT
 awx
 awx
@@ -28211,7 +30093,7 @@ afz
 ahJ
 afz
 afz
-afz
+kcE
 aHM
 afz
 afz
@@ -28227,7 +30109,7 @@ aDj
 vLe
 pcJ
 sGb
-aqf
+ahl
 aYG
 aYG
 aYG
@@ -28241,12 +30123,12 @@ aIu
 aBk
 aBk
 aBk
-aIu
-aBk
-aBk
+umK
+pAf
+mWY
 aon
 aBk
-ajF
+lIK
 aIu
 aBk
 aBk
@@ -28265,7 +30147,7 @@ arG
 rRA
 hcJ
 aIc
-aOQ
+mQH
 afv
 aOQ
 atY
@@ -28372,12 +30254,12 @@ fpt
 fpt
 fpt
 sTA
-aqf
+ahl
 aAy
 aUM
 fLv
 aoj
-afz
+apS
 asf
 uJn
 ajr
@@ -28403,8 +30285,8 @@ aDj
 saq
 vLe
 pcJ
-aum
-aqf
+sdp
+ahl
 aYG
 aYG
 aYG
@@ -28417,13 +30299,13 @@ apy
 aog
 aog
 agE
-agE
-agE
 anp
+agE
+vXj
 agE
 aog
 aBk
-bWK
+gjb
 aog
 aBk
 bWK
@@ -28449,7 +30331,7 @@ agc
 aLZ
 aZV
 asP
-aGg
+pfE
 afv
 aQY
 fIR
@@ -28463,7 +30345,7 @@ acw
 aMV
 aZV
 aDz
-aGg
+pfE
 afv
 arC
 aEG
@@ -28549,7 +30431,7 @@ pZs
 aHw
 fpt
 ayP
-aqf
+ahl
 ayr
 aen
 aCM
@@ -28567,7 +30449,7 @@ aMy
 afz
 fRc
 afz
-afz
+apS
 afz
 afz
 ajc
@@ -28581,7 +30463,7 @@ aqa
 xLG
 pcJ
 aZl
-aqf
+ahl
 aYG
 aYG
 aYG
@@ -28598,13 +30480,13 @@ ayH
 ajs
 aRk
 aTr
-aCm
+bKU
+wmF
+xQC
+jpa
 wmF
 wmF
-aIn
-wmF
-wmF
-aIn
+jpa
 wmF
 bxi
 anE
@@ -28725,8 +30607,8 @@ tkm
 bCo
 eFT
 fpt
-ayP
-aqf
+tNU
+ahl
 aTE
 aTG
 aHn
@@ -28745,10 +30627,10 @@ afz
 aSK
 apS
 afz
-afz
-aum
+sgi
+lcZ
 aYk
-afz
+eEX
 afz
 afz
 jXa
@@ -28758,7 +30640,7 @@ afO
 nzo
 aej
 abn
-aqf
+ahl
 aYG
 aYG
 aYG
@@ -28785,7 +30667,7 @@ aCm
 aCm
 aCm
 umc
-afv
+ktk
 pvV
 alp
 kNp
@@ -28903,39 +30785,39 @@ pZs
 aHw
 fpt
 arO
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
-aqf
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+ahl
+rWU
 aum
 aum
 aum
-aum
-aum
+kdD
 uJn
 uJn
+rWU
 aum
 aum
 aum
-aum
-aum
+sie
 uJn
 uJn
 aeg
 aPt
 aNR
 aiX
-aum
+sdp
 aum
 acz
 aum
 aIl
-aMl
-aqf
+dRc
+ahl
 aYG
 aYG
 aYG
@@ -28947,14 +30829,14 @@ acr
 anW
 aNz
 aaq
-agE
+eXg
 aWI
 oIf
 aZG
 aTr
 aCm
 aCm
-aCm
+lgp
 aDX
 tkO
 vIn
@@ -29074,20 +30956,20 @@ crq
 awl
 aNC
 tmN
-ayP
+pbH
 aEO
 qPk
 fpt
 fpt
 oRK
-afQ
-afQ
-afQ
-afQ
-afQ
-afQ
+aDQ
+aDQ
+aDQ
+aDQ
+aDQ
+aDQ
 ahl
-aqf
+ahl
 aSw
 aSw
 aSw
@@ -29099,20 +30981,20 @@ aSw
 aSw
 aSw
 aSw
-aSw
+gGm
 uJn
 uJn
-uJn
-oFX
-oFX
-oFX
 uJn
 oFX
 oFX
 oFX
 uJn
+oFX
+oFX
+oFX
 uJn
-aqf
+uJn
+ahl
 ahl
 aDQ
 aDQ
@@ -29121,17 +31003,17 @@ aWh
 aog
 aog
 aog
-aog
+edo
 aog
 aiU
 agE
 agE
 aTr
 aTr
-agE
+ccj
 aCm
 eUL
-aCm
+lgp
 wPI
 acA
 rll
@@ -29140,7 +31022,7 @@ aCm
 eUL
 ptZ
 afv
-kNp
+pVF
 aTT
 afv
 afv
@@ -29257,12 +31139,12 @@ xjm
 xjm
 nxj
 tmN
+aDQ
 afQ
-afQ
-afQ
-afQ
-afQ
-afQ
+aDQ
+aDQ
+aDQ
+aDQ
 aDQ
 aIr
 aLe
@@ -29276,7 +31158,7 @@ aLe
 aLe
 aLe
 aLe
-aLe
+bHp
 aIr
 aIr
 dYR
@@ -29288,11 +31170,11 @@ aLe
 byz
 dYR
 aLe
-aAO
+bzQ
 frR
-ljO
-aAO
-fne
+eRP
+vra
+bzQ
 aQf
 aQf
 aAO
@@ -29301,14 +31183,14 @@ aAO
 jqB
 aAO
 aAO
-fne
+bzQ
 aQf
 aAO
 aAO
 aCm
 aCm
 aCm
-aCm
+lgp
 fUj
 aoL
 mas
@@ -29317,8 +31199,8 @@ eUL
 aCm
 eUL
 aIn
-eUL
-aCm
+aRC
+wmF
 aCm
 kNp
 eqr
@@ -29441,91 +31323,91 @@ kIR
 kIR
 aAO
 aAO
-awI
+fne
 aAO
 aAO
 aAO
 aQf
 aQf
 jqB
+fne
+aAO
+aAO
+aAO
+aAO
+rjq
+dsX
+scv
+sUi
+sUi
+sUi
+sUi
+sUi
+sUi
+sUi
+sUi
+dJx
+aAO
+qwe
+boQ
+ljO
+ljO
+ljO
+dLD
+ljO
+ljO
+dLD
+nSb
+dLD
+ljO
+ljO
+ljO
+ljO
+ljO
+chz
+lGi
+lGi
+hQu
+cNv
+chz
+lGi
+lGi
+lGi
+wxg
+lGi
+hVV
+gWp
+hVV
+hVV
+cBJ
 awI
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-jqB
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-frR
-ljO
-ljO
-ljO
-ljO
-dLD
-ljO
-ljO
-dLD
-aQf
-dLD
-ljO
-ljO
-ljO
-ljO
-ljO
-eUL
-aCm
-aCm
-aCm
-aCm
-eUL
-aCm
-aCm
-aCm
-aCm
-aCm
-hVV
-hVV
-hVV
-hVV
-aZV
-rRA
-kNp
-aZV
-aZV
-aZV
-rRA
-aZV
-aZV
-kNp
-aZV
+gcK
+cBJ
+cBJ
+cBJ
+awI
+cBJ
+cBJ
+gcK
+cBJ
 pPo
-aZV
-aZV
-aZV
-rRA
-kNp
-aZV
-aZV
-rRA
-aZV
-aZV
-aZV
-kNp
-aZV
-aZV
-aZV
-aZV
-rRA
+cBJ
+cBJ
+cBJ
+awI
+gcK
+cBJ
+cBJ
+awI
+cBJ
+cBJ
+cBJ
+gcK
+cBJ
+cBJ
+cBJ
+cBJ
+awI
 aJf
 aJf
 aea
@@ -29582,12 +31464,12 @@ mpM
 mpM
 aDr
 aDr
-aiT
-mnT
-mnT
+ajy
+auV
+auV
 aUT
-mnT
-mnT
+auV
+auV
 mpM
 aDr
 aYq
@@ -29627,7 +31509,7 @@ aQf
 aAO
 aAO
 aAO
-aAO
+aQf
 aAO
 aQf
 aAO
@@ -29641,16 +31523,16 @@ aAO
 aAO
 aAO
 aAO
-aAO
+qcp
 aQf
-frR
-ljO
-aAO
+wcE
+eRP
+vra
 aAO
 aYI
 aAO
 aAO
-aAO
+pRq
 aAO
 aQf
 aAO
@@ -29660,12 +31542,12 @@ aQf
 aAO
 aAO
 tNB
+liQ
+edB
+bfr
 aCm
-eUL
-aCm
-aCm
-aCm
-aCm
+liQ
+liQ
 aCm
 jZp
 awf
@@ -29761,9 +31643,9 @@ aEG
 aEG
 aEG
 aEG
-aiT
-aiT
-mnT
+ajy
+ajy
+auV
 aDr
 aDr
 aDr
@@ -29801,7 +31683,7 @@ aGu
 hCn
 aAO
 hCn
-hCn
+aGu
 hCn
 hCn
 hCn
@@ -29818,18 +31700,18 @@ hCn
 hCn
 aGu
 hCn
-hCn
+qWQ
 hCn
 piN
 aDQ
 aDQ
-aDQ
+fmB
 aDQ
 aDQ
 ozg
 ozg
 ozg
-aRC
+ozg
 ozg
 ozg
 ozg
@@ -29838,7 +31720,7 @@ awK
 aWC
 aWC
 azV
-aYy
+qjP
 awK
 awK
 azV
@@ -29944,10 +31826,10 @@ kbQ
 kjn
 ape
 kjn
-aIC
+mJJ
 mWO
 auc
-aJn
+aXY
 ivM
 oMc
 uRq
@@ -29959,44 +31841,44 @@ hUm
 dSe
 iqJ
 xDV
-tmN
+hUD
 fPI
-lID
-lID
-aBB
-nEn
-hGc
+ocv
+ocv
+eQU
+yes
+dIF
 ljO
 ljO
 ljO
 ljO
-aAO
+sUi
+ljO
+dLD
+azM
+dLD
+ljO
+sUi
+ljO
+ljO
+ljO
+ljO
+ljO
+ljO
+sUi
+ljO
 ljO
 dLD
 ljO
-dLD
-ljO
-aAO
 ljO
 ljO
+sUi
 ljO
 ljO
 ljO
 ljO
-aAO
-ljO
-ljO
-dLD
-ljO
-ljO
-ljO
-aAO
-ljO
-ljO
-ljO
-ljO
-ljO
-ljO
+omk
+pqK
 hZw
 aDQ
 aDQ
@@ -30020,7 +31902,7 @@ auk
 aop
 acR
 aaT
-aWC
+sts
 aWC
 aWC
 aWC
@@ -30135,7 +32017,7 @@ aEb
 aPU
 aBe
 aGf
-azr
+eFW
 axS
 lID
 lID
@@ -30150,14 +32032,7 @@ kIR
 aAO
 nex
 eAa
-nex
-nex
-nex
-aAO
-nex
-nex
-nex
-nex
+scL
 nex
 nex
 aAO
@@ -30173,6 +32048,13 @@ nex
 nex
 nex
 nex
+nex
+aAO
+nex
+nex
+nex
+nex
+aPa
 nex
 uPg
 aDQ
@@ -30192,7 +32074,7 @@ awt
 mEQ
 acR
 tXf
-aKW
+tVW
 aKW
 aKW
 aKW
@@ -30285,9 +32167,9 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
+ajy
+auV
+auV
 aDr
 aDr
 exb
@@ -30296,7 +32178,7 @@ mpM
 uPo
 mpM
 mpM
-mnT
+auV
 aDr
 aYq
 axm
@@ -30327,6 +32209,11 @@ ivd
 aAO
 aAO
 aAO
+qcp
+aAO
+aAO
+aAO
+aQf
 aAO
 aAO
 aAO
@@ -30336,20 +32223,15 @@ aAO
 aAO
 aAO
 aAO
-aQf
-aAO
-aAO
-aAO
-aAO
 aAO
 aAO
 aQf
-aQf
+bTb
 aAO
 aAO
 aAO
 aAO
-aQf
+fCN
 aQf
 frR
 aDQ
@@ -30465,16 +32347,16 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
-aiT
-mnT
-mnT
-mnT
-mnT
+ajy
+auV
+auV
+ajy
+auV
+auV
+auV
+auV
 aDr
-aiT
+ajy
 aDh
 aDh
 aUX
@@ -30503,31 +32385,31 @@ kIR
 kIR
 aAO
 aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-aAO
-qjn
+iRn
+ler
+fbj
 aAO
 aAO
 aAO
 qjn
+iRn
+iRn
+aAO
+pRq
 aAO
 aAO
 aAO
 aAO
 aAO
+iRn
+iRn
+pRq
 aAO
 aAO
-qjn
 aAO
-aAO
-aAO
-qjn
-aAO
-aAO
+pRq
+ler
+iRn
 vnE
 aDQ
 aDQ
@@ -30647,12 +32529,12 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
-mnT
-mnT
-aiT
+ajy
+auV
+auV
+auV
+auV
+ajy
 aDh
 aDh
 vlA
@@ -30674,27 +32556,27 @@ fvB
 tmN
 tmN
 tmN
-aDh
-aDh
-aDh
-aUo
-aUo
+tmN
+tmN
+tmN
+qkT
+xPe
 nXt
-nXt
+tky
 aaR
-aUo
+mtf
 oWU
 oWU
 oWU
-aUo
+mtf
 sru
 aVi
 nXt
-aUo
+mtf
 oWU
 oWU
 oWU
-aUo
+mtf
 nXt
 sru
 dTR
@@ -30703,12 +32585,12 @@ oWU
 oWU
 oWU
 aUo
-sru
+iMz
 aGm
 nXt
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
 ozg
 aBa
 anu
@@ -30723,17 +32605,17 @@ ayI
 avU
 ayI
 aqy
-aKW
+tVW
 uel
 aKW
 aKW
 amM
 azV
 acR
+uel
 aKW
 aKW
-aKW
-rAj
+smo
 aCS
 nmO
 ozg
@@ -30827,10 +32709,10 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
-aUq
+ajy
+auV
+auV
+ajy
 aDh
 aDh
 aGv
@@ -30851,11 +32733,11 @@ exH
 mHq
 bIe
 aUb
-aDh
-aDh
-aDh
-aUo
-aUo
+tmN
+tmN
+tmN
+xPe
+xPe
 aZf
 wDL
 aRG
@@ -30867,11 +32749,11 @@ oWU
 aMP
 ayz
 abc
-aUo
+mtf
 qZf
 xFF
 add
-aUo
+mtf
 aUh
 aoV
 gtS
@@ -30883,9 +32765,9 @@ oWU
 aIx
 dzT
 ahz
-aUo
+mtf
 abA
-aUo
+mtf
 ozg
 aqk
 aPk
@@ -31027,42 +32909,42 @@ srf
 hhV
 hIP
 pbD
-hhV
-aDh
-aDh
-aDh
-aUo
-aUo
+neU
+tmN
+tmN
+tmN
+xPe
+xPe
 aLA
 aBt
 kVV
-aUo
-aUo
-aUo
-aUo
-aUo
-eow
+mtf
+mtf
+mtf
+mtf
+mtf
+wkn
 aBt
 arl
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 pPT
 aBt
-gsQ
-aUo
-aUo
-aUo
-aUo
-aUo
+jCa
+mtf
+mtf
+mtf
+mtf
+mtf
 nnZ
 aBt
 aGl
+mtf
 aUo
-aUo
-aUo
+mtf
 ozg
 aRQ
 aMS
@@ -31077,7 +32959,7 @@ aaT
 aWC
 aWC
 azV
-aba
+qJY
 aWC
 aWC
 azV
@@ -31189,11 +33071,11 @@ aEG
 aEG
 aEG
 aEG
-aiT
+ajy
 aUT
-mnT
-mnT
-aiT
+auV
+auV
+ajy
 aDr
 aDh
 aDh
@@ -31205,13 +33087,13 @@ yfG
 fZz
 iJr
 rzH
-aDh
-aDh
-aUo
-aUo
+tmN
+tmN
+xPe
+xPe
 lPm
 agT
-moW
+lYl
 azv
 lPm
 avc
@@ -31223,7 +33105,7 @@ moW
 auP
 lPm
 aSC
-aUo
+mtf
 aRK
 lPm
 nXv
@@ -31235,7 +33117,7 @@ aUo
 syi
 lPm
 alf
-moW
+lYl
 aSv
 lPm
 adl
@@ -31254,7 +33136,7 @@ dws
 awK
 ayi
 acR
-aaE
+cYk
 agI
 agI
 aqy
@@ -31368,13 +33250,13 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
+ajy
+auV
 aDr
-aiT
+ajy
 aDr
 aEG
-aiT
+ajy
 aDh
 aDh
 cyA
@@ -31382,25 +33264,25 @@ uWi
 uFy
 fRm
 bhi
-aDh
-aDh
-aUo
+tmN
+tmN
+xPe
 ssW
 lPm
 ati
 aBt
-ati
+lmC
 lPm
 nfP
 aUo
 rhq
 lPm
-ati
+vPo
 aBt
 ati
 lPm
 afk
-aUo
+mtf
 dAO
 lPm
 ati
@@ -31411,7 +33293,7 @@ nfP
 aUo
 rhq
 lPm
-ati
+lmC
 aBt
 ati
 lPm
@@ -31543,27 +33425,27 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
-mnT
+ajy
+auV
+auV
+auV
 mnT
 aDr
-aiT
+ajy
 aEG
-mnT
-aiT
+auV
+ajy
 aDh
 bUO
-hhV
+hHu
 kbp
 aGB
 iNc
 aDh
 aDh
-aUo
+mtf
 act
-aUo
+mtf
 aJY
 aBt
 aDL
@@ -31575,24 +33457,24 @@ lPm
 aBt
 aBt
 pKQ
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 vgS
 aBt
-gsQ
+jCa
 lPm
 avc
 aUo
 syi
 lPm
-aRF
+fWZ
 aBt
 agS
-aUo
-aUo
+mtf
+mtf
 aUo
 amI
 amI
@@ -31608,7 +33490,7 @@ aVL
 awK
 ayi
 acR
-amM
+xcu
 ajM
 ajM
 aSn
@@ -31725,11 +33607,11 @@ aEG
 aEG
 aEG
 aEG
-aiT
+ajy
 aDr
 aEG
-aiT
-aiT
+ajy
+ajy
 aDh
 aDh
 aDh
@@ -31738,12 +33620,12 @@ aDh
 aDh
 aDh
 aDh
-aUo
-aUo
+mtf
+mtf
 lPm
 ati
 aBt
-ati
+lmC
 lPm
 nfP
 aUo
@@ -31754,7 +33636,7 @@ aBt
 ati
 lPm
 uMR
-aUo
+mtf
 vHQ
 lPm
 ati
@@ -31765,8 +33647,8 @@ nfP
 aUo
 rhq
 lPm
-ati
-aBt
+lmC
+lRz
 ati
 lPm
 aOt
@@ -31785,7 +33667,7 @@ ozg
 ozg
 ozg
 acR
-amM
+xcu
 abt
 abt
 aSn
@@ -31901,9 +33783,9 @@ aEG
 aEG
 aEG
 aEG
-aiT
-mnT
-mnT
+ajy
+auV
+auV
 aEG
 aEG
 aEG
@@ -31915,32 +33797,32 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 ace
 lPm
 aLk
 moW
 aTh
 lPm
-avc
+rue
 aUo
-syi
+kXF
 lPm
 avO
 moW
 aAo
 lPm
 cqk
-aUo
+mtf
 pSQ
 lPm
 btA
 aOp
 aiQ
 lPm
-avc
+rue
 aUo
-syi
+kXF
 lPm
 amw
 moW
@@ -31962,7 +33844,7 @@ ozg
 ozg
 ozg
 pXl
-amM
+xcu
 aQh
 aQh
 aSn
@@ -32092,38 +33974,38 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 bhu
-aUo
+mtf
 app
 ati
 aMY
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 ayD
 ati
 eJA
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 aaf
 ati
 axq
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 aQZ
-ati
+hWJ
 moi
-aUo
-aUo
+mtf
+mtf
 aUo
 vRh
 aVD
@@ -32139,7 +34021,7 @@ aDO
 aWc
 rdX
 aSF
-aRJ
+iIL
 aph
 aGc
 aSn
@@ -32269,7 +34151,7 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 aUo
 lPm
 arh
@@ -32277,7 +34159,7 @@ ati
 aDL
 aGY
 cMX
-aUo
+mtf
 cMX
 lPm
 aGC
@@ -32285,25 +34167,25 @@ ati
 mvw
 lPm
 aoc
-aUo
+mtf
 aoc
 lPm
 ayn
 ati
-gsQ
+jCa
 aGY
 cMX
-aUo
+mtf
 cMX
 lPm
-aRF
+mgZ
 ati
 aHZ
 lPm
 aoc
 aUo
 vRh
-aVD
+aBr
 vRh
 aVD
 vRh
@@ -32315,7 +34197,7 @@ aca
 dbK
 aaF
 aAC
-aSn
+ohn
 aRJ
 aTl
 afA
@@ -32446,15 +34328,15 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 aoc
 lPm
 arh
-aBt
+lRz
 aDL
 aGY
 odS
-aUo
+mtf
 vNW
 lPm
 eow
@@ -32462,15 +34344,15 @@ aBt
 mvw
 lPm
 ojW
-aUo
+mtf
 ojW
 lPm
 ayn
 aBt
-gsQ
+jCa
 aGY
 odS
-aUo
+mtf
 odS
 lPm
 aRF
@@ -32623,7 +34505,7 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 uUf
 lPm
 arh
@@ -32631,15 +34513,15 @@ aBt
 aDL
 aGY
 amm
-aUo
+mtf
 amm
 lPm
 eow
-aBt
+lRz
 mvw
 lPm
 ojW
-aUo
+mtf
 ojW
 lPm
 ayn
@@ -32647,7 +34529,7 @@ aBt
 gsQ
 aGY
 amm
-aUo
+mtf
 amm
 lPm
 aRF
@@ -32658,7 +34540,7 @@ ojW
 aUo
 vRh
 aVD
-vRh
+yaj
 aVD
 vRh
 aJg
@@ -32800,7 +34682,7 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 ojW
 lPm
 arh
@@ -32808,7 +34690,7 @@ ati
 aDL
 aDW
 aqL
-aUo
+mtf
 aqL
 lPm
 eow
@@ -32816,7 +34698,7 @@ ati
 mvw
 lPm
 ojW
-aUo
+mtf
 ojW
 lPm
 ayn
@@ -32824,12 +34706,12 @@ ati
 gsQ
 aDW
 aqL
-aUo
+mtf
 aqL
 lPm
 aRF
 ati
-aHZ
+vtX
 lPm
 ojW
 aUo
@@ -32837,7 +34719,7 @@ aWa
 aWa
 aWa
 aWa
-aWa
+abb
 aJg
 aJg
 ozg
@@ -32977,31 +34859,31 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 ojW
 lPm
 arh
-ati
+vPo
 aDL
 aDW
 ajA
-aUo
+mtf
 ajA
 lPm
-eow
+hXb
 ati
-mvw
+jpt
 lPm
 aEr
-aUo
+mtf
 aEr
 lPm
 ayn
-ati
+vPo
 gsQ
 aDW
 ajA
-aUo
+mtf
 ajA
 lPm
 aRF
@@ -33009,14 +34891,14 @@ ati
 aHZ
 lPm
 aEr
-aUo
-aJg
+mtf
+adz
 afN
 afN
 afN
+adz
 aJg
-aJg
-aJg
+adz
 aOR
 aOR
 aOR
@@ -33154,46 +35036,46 @@ aEG
 aEG
 aEG
 aEG
-aUo
+mtf
 aEr
 lPm
 aGS
 aHc
 aHk
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 aYp
 alS
 aAW
 lPm
-aAu
-aUo
-aAu
+lBJ
+mtf
+lBJ
 lPm
 azT
 aZx
 aMI
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 aWl
 adV
 agd
 lPm
-aAu
-aUo
-aJg
+lBJ
+mtf
+adz
 aiy
 aiy
 aGo
-aJg
+adz
 ams
-aJg
+adz
 aOR
 aOR
 aOR
@@ -33267,6 +35149,49 @@ aEG
 aEG
 aEG
 aEG
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -33288,89 +35213,46 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aUo
+mtf
 aAu
-aUo
+mtf
 aFf
 aCw
 aXq
-aUo
+mtf
 abA
 abA
 abA
-aUo
+mtf
 aCw
 aEs
 aFf
-aUo
-aUo
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
+mtf
+mtf
 aFf
 aCw
 arc
-aUo
+mtf
 abA
 abA
 abA
-aUo
+mtf
 aCw
 rhh
-aFf
+vSC
 aUo
-aUo
-aUo
-aJg
+mtf
+mtf
+adz
 asB
 asB
 asB
 aNK
-aJg
-aJg
+adz
+adz
 aOR
 aOR
 aOR
@@ -33385,17 +35267,17 @@ aYB
 azR
 ozg
 aEG
-aJg
+adz
 alz
 aAp
 aAp
 aAp
 aAp
-aJg
+adz
 aFS
 aFS
-aFS
-aJg
+adz
+adz
 aAp
 aAp
 aAp
@@ -33403,7 +35285,7 @@ aAp
 aAp
 aAp
 aAp
-aJg
+adz
 aFS
 aFS
 aFS
@@ -33486,6 +35368,7 @@ aEG
 aEG
 aEG
 aEG
+sCf
 aEG
 aEG
 aEG
@@ -33507,60 +35390,59 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
 aey
 aey
-aey
-aJg
-aJg
-aJg
-aJg
-aJg
-aey
-aey
-aey
-akb
-akb
-akb
-akb
-akb
-aey
-aey
-aey
-aJg
-aJg
-aJg
-aJg
-aJg
+meR
+adz
+adz
+adz
+adz
+adz
 aey
 aey
 aey
 akb
 akb
-aUo
-aJg
+akb
+akb
+akb
+aey
+aey
+aey
+adz
+adz
+adz
+adz
+adz
+aey
+aey
+meR
+akb
+akb
+mtf
+adz
 asB
 asB
 asB
 aNK
-aJg
-aJg
+adz
+adz
 aNK
-aJg
-aJg
-aJg
-aJg
-ozg
+adz
+adz
+adz
+adz
+iTf
 amS
 rzW
 rzW
 rzW
 rzW
-pKJ
-ozg
+amS
+iTf
 aNK
 aNK
 asB
@@ -33572,7 +35454,7 @@ aNK
 aNK
 aNK
 aNK
-aJg
+adz
 eGR
 eGR
 asB
@@ -33581,9 +35463,9 @@ asB
 asB
 asB
 aNK
-aJg
-aJg
-aJg
+adz
+adz
+adz
 adz
 aEG
 aEG
@@ -33663,6 +35545,7 @@ eEG
 eEG
 aEG
 aEG
+sCf
 aEG
 aEG
 aEG
@@ -33684,46 +35567,67 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aUo
-aUo
-aUo
+mtf
+mtf
+mtf
 txJ
 aST
-aST
+xjd
 aBz
 alu
-alu
+gOA
 alu
 acT
 aST
 aST
 aST
-aBz
+vQf
 xpl
 aGD
 aHG
-acT
+cuH
 aST
 aST
 aST
 aBz
 alu
-alu
+gOA
 alu
 acT
 aST
 aST
-aST
+xjd
 aBz
+gOA
 alu
 alu
 alu
 alu
 alu
 alu
+gOA
 alu
 alu
+alu
+gOA
+alu
+alu
+gOA
+alu
+alu
+alu
+alu
+alu
+alu
+gOA
+alu
+gOA
+alu
+alu
+alu
+alu
+alu
+gOA
 alu
 alu
 alu
@@ -33735,30 +35639,8 @@ alu
 alu
 alu
 alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
 gOA
+alu
 alu
 alu
 adz
@@ -33840,7 +35722,7 @@ eEG
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -33867,7 +35749,7 @@ aLD
 aBg
 aWa
 aWa
-aWa
+rfp
 abb
 aWa
 alu
@@ -33878,8 +35760,8 @@ aUD
 aTA
 vYW
 pwX
-pwX
-pwX
+nvd
+wZs
 dfZ
 abJ
 aUD
@@ -33891,17 +35773,17 @@ aUD
 aUD
 aUD
 aTA
-abJ
+sVN
 aUD
 aUD
 aUD
-aTA
+hiX
 alu
 aWa
 aWa
 aWa
 aWa
-aWa
+abb
 aWa
 aWa
 aWa
@@ -33936,7 +35818,7 @@ aUD
 aUD
 aTA
 aWa
-aWa
+tIW
 alu
 adz
 adz
@@ -34017,7 +35899,7 @@ eEG
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34044,13 +35926,13 @@ aSA
 aBg
 abJ
 aUD
-aUD
+fqg
 aUD
 aTA
 alu
 aEC
 aVD
-aVD
+aXe
 aVD
 ajZ
 aZC
@@ -34058,62 +35940,62 @@ aVD
 akk
 aVD
 aTz
-aEC
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-ajZ
-alu
-alu
-alu
-epS
-alu
-alu
-alu
-epS
-alu
-alu
-alu
-aWa
-aWa
-aWa
-aEC
-aVD
-aBr
-aVD
-ajZ
-aWa
-aWa
-aWa
-aEC
-aVD
-aVD
-aVD
-aVD
-aVD
-aVD
-ajZ
-aWa
-aWa
-aWa
-aWa
-aEC
-aVD
-aVD
-aVD
-ajZ
-aWa
-aWa
+cCl
+ala
+ala
+ala
+udf
+cCl
+ala
+ala
+ala
+udf
+pBu
+ala
+ala
+ala
+udf
+pKJ
+pKJ
+pKJ
+wkW
+pKJ
+pKJ
+pKJ
+wkW
+pKJ
+pKJ
+pKJ
+uhH
+uhH
+uhH
+cCl
+ala
+pSr
+ala
+udf
+uhH
+uhH
+uhH
+cCl
+ala
+ala
+ala
+iYu
+iYu
+ala
+udf
+uhH
+uhH
+uhH
+uhH
+cCl
+ala
+ala
+ala
+udf
+uhH
+rsL
 aWa
 akb
 adz
@@ -34194,7 +36076,7 @@ afo
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34218,51 +36100,51 @@ aEG
 aEG
 atb
 aSA
-aBg
-aEC
-aVD
-aVD
-aVD
-ajZ
-alu
-aEC
-aVD
-aVD
-aVD
-ajZ
+isE
+cCl
+ala
+bQO
+uUB
+udf
+pKJ
+cCl
+ala
+ala
+ala
+udf
 akx
 arL
-aXe
-aVD
+kzo
+ala
 aRX
-aEC
-aVD
-aVD
-aVD
-ajZ
-tNi
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-xTf
-alu
-aWa
-aWa
-aWa
-aWa
-aWa
-aWa
-aWa
-aWa
-aWa
-alu
-ccO
-aUD
+cCl
+ala
+ala
+ala
+udf
+sLj
+ala
+ala
+ala
+udf
+cAY
+ala
+ala
+ala
+toU
+pKJ
+uhH
+uhH
+uhH
+uhH
+uhH
+uhH
+uhH
+uhH
+uhH
+pKJ
+ddM
+lWp
 aTA
 aKX
 aHI
@@ -34290,7 +36172,7 @@ aHI
 aHI
 abK
 abJ
-aUD
+fqg
 aTA
 aUF
 aSA
@@ -34371,7 +36253,7 @@ wpQ
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34398,7 +36280,7 @@ aSA
 aBg
 aEC
 aMz
-jmu
+qQi
 aMz
 ajZ
 uXF
@@ -34437,9 +36319,9 @@ aMz
 aMz
 jmu
 aWa
-alu
+epS
 aEC
-aVD
+aCp
 aqA
 azb
 asY
@@ -34452,14 +36334,14 @@ asY
 asY
 anL
 asY
-asY
+peG
 adp
 aCO
 aBm
 asY
 alC
 azb
-azb
+cCh
 asY
 asY
 asY
@@ -34467,7 +36349,7 @@ asY
 aSM
 aWa
 aEC
-aVD
+aCp
 ajZ
 art
 aSA
@@ -34548,7 +36430,7 @@ aNa
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34575,7 +36457,7 @@ aSA
 aBg
 aEC
 aVD
-aVD
+aCp
 aVD
 ajZ
 skM
@@ -34614,9 +36496,9 @@ aMz
 jmu
 aMz
 aWa
-alu
+epS
 aEC
-aVD
+aCp
 gbH
 aJe
 alu
@@ -34644,7 +36526,7 @@ aJe
 acB
 aWa
 aEC
-aVD
+aCp
 ajZ
 ajX
 adD
@@ -34725,7 +36607,7 @@ eEG
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34752,7 +36634,7 @@ aJg
 aJg
 aKX
 aHI
-aHI
+vSP
 aHI
 abK
 skM
@@ -34781,7 +36663,7 @@ ayX
 ahc
 oex
 aWa
-alu
+aco
 aWa
 aMz
 aMz
@@ -34793,7 +36675,7 @@ aMz
 aiv
 rBy
 aEC
-aVD
+aCp
 aos
 alu
 abX
@@ -34821,7 +36703,7 @@ alu
 acB
 aWa
 aEC
-aVD
+dMv
 ajZ
 art
 aSA
@@ -34902,7 +36784,7 @@ eEG
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -34929,8 +36811,8 @@ aJg
 aJg
 aDG
 aMz
-aWa
-aWa
+rfp
+abb
 aWa
 skM
 aMi
@@ -34970,7 +36852,7 @@ aMz
 aiv
 rBy
 aKX
-aHI
+vSP
 aos
 aKa
 aRR
@@ -34998,7 +36880,7 @@ azz
 acB
 aWa
 aKX
-aHI
+vSP
 abK
 art
 aSA
@@ -35079,7 +36961,7 @@ eEG
 eEG
 aEG
 aEG
-aEG
+sCf
 aEG
 aEG
 aEG
@@ -35104,9 +36986,9 @@ aEG
 aJg
 aJg
 aJg
-aWa
-aWa
 abb
+aWa
+cAB
 aWa
 aWa
 skM
@@ -35137,17 +37019,17 @@ oex
 aWa
 alu
 aWa
-abJ
+wnK
 aUD
 aUD
 aUD
 aUD
-aUD
+orE
 bfo
 idK
 lRg
 aMz
-aWa
+rfp
 apJ
 aKa
 aRR
@@ -35175,8 +37057,8 @@ als
 aHP
 aWa
 aMz
-aWa
-aMz
+rfp
+kZD
 adz
 adz
 adz
@@ -35256,17 +37138,17 @@ tRe
 eEG
 eEG
 eEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
-aEG
+sRD
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -35283,7 +37165,7 @@ aSA
 aBg
 abJ
 aUD
-aUD
+fqg
 aUD
 aTA
 skM
@@ -35324,7 +37206,7 @@ kaq
 idK
 lRg
 abJ
-aUD
+fqg
 aOY
 aKa
 aRR
@@ -35352,7 +37234,7 @@ aKa
 acB
 aWa
 abJ
-aUD
+fqg
 aTA
 art
 aql
@@ -35442,8 +37324,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -35460,7 +37342,7 @@ aSA
 aBg
 aEC
 aBr
-aVD
+aCp
 aVD
 ajZ
 skM
@@ -35491,17 +37373,17 @@ oex
 aWa
 alu
 aWa
-aEC
+lYB
 alu
 alu
 alu
-alu
+qfr
 abR
 kaq
 idK
 nAo
 tNi
-aVD
+qnN
 aJj
 alu
 aRR
@@ -35529,8 +37411,8 @@ alu
 aiG
 aWa
 aEC
-aVD
-ajZ
+rsT
+tDC
 aDw
 arw
 abH
@@ -35619,8 +37501,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -35637,7 +37519,7 @@ aSA
 aBg
 aEC
 aMz
-aMz
+pPl
 aMz
 ajZ
 skM
@@ -35669,7 +37551,7 @@ aWa
 alu
 aWa
 aEC
-abR
+dDb
 abR
 aaL
 aHb
@@ -35678,7 +37560,7 @@ kaq
 idK
 lRg
 aEC
-aVD
+aCp
 aJj
 aJe
 aRR
@@ -35706,7 +37588,7 @@ aJe
 aiG
 aWa
 aEC
-aVD
+aCp
 ajZ
 ajX
 aVm
@@ -35796,8 +37678,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -35814,7 +37696,7 @@ aSA
 aBg
 aEC
 aVD
-aVD
+aCp
 aVD
 ajZ
 skM
@@ -35846,7 +37728,7 @@ aWa
 alu
 aWa
 aEC
-abR
+dDb
 abR
 abR
 alx
@@ -35855,7 +37737,7 @@ kaq
 idK
 lRg
 tNi
-aVD
+aCp
 aOY
 epS
 aRR
@@ -35883,8 +37765,8 @@ alu
 acB
 aWa
 aEC
-aVD
-ajZ
+rsT
+tDC
 aaz
 arw
 abH
@@ -35973,8 +37855,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -35991,9 +37873,9 @@ aSA
 aBg
 aKX
 laE
+vSP
 aHI
-aHI
-abK
+twr
 skM
 abT
 ayX
@@ -36023,16 +37905,16 @@ aWa
 alu
 aWa
 aEC
-aVD
+uoi
 aMz
 abR
-abR
+ewR
 aVD
 idK
 idK
 lRg
 aKX
-aHI
+vSP
 aFG
 alu
 aRR
@@ -36060,7 +37942,7 @@ alu
 acB
 aWa
 aKX
-aHI
+vSP
 abK
 atb
 aql
@@ -36150,8 +38032,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -36167,8 +38049,8 @@ aJg
 aJg
 aJg
 aWa
-aWa
-aWa
+abb
+rfp
 aWa
 aWa
 skM
@@ -36199,17 +38081,17 @@ oex
 aWa
 alu
 aWa
-aKX
+lSg
 aMz
+iLC
+iLC
 aMz
-aMz
-aMz
-aHI
+dfN
 cyP
 idK
 lRg
 aMz
-aWa
+rfp
 awq
 alu
 aRR
@@ -36237,8 +38119,8 @@ aKa
 aGU
 aWa
 aMz
-aWa
-aMz
+rfp
+kZD
 adz
 adz
 adz
@@ -36327,8 +38209,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -36345,7 +38227,7 @@ aJg
 aJg
 aDG
 aWa
-aWa
+rfp
 aMz
 aWa
 skM
@@ -36375,7 +38257,7 @@ ahc
 oex
 aWa
 alu
-aWa
+abb
 aMz
 aMz
 jnX
@@ -36386,7 +38268,7 @@ bcc
 nyU
 rmN
 abJ
-aUD
+fqg
 aos
 alu
 aRR
@@ -36414,7 +38296,7 @@ alu
 acB
 aWa
 abJ
-aUD
+fqg
 aTA
 art
 aSA
@@ -36504,8 +38386,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -36522,9 +38404,9 @@ aJg
 aJg
 abJ
 ahA
+fqg
 aUD
-aUD
-aTA
+hiX
 skM
 aae
 ayX
@@ -36553,17 +38435,17 @@ oex
 aWa
 alu
 abb
-jmu
-aMz
+ucz
+hXn
 aMz
 udT
 aMz
-aMz
+jmu
 kiZ
 mrG
 hFA
 aEC
-aVD
+aCp
 aos
 alu
 amU
@@ -36591,7 +38473,7 @@ alu
 acB
 aWa
 aEC
-aVD
+dMv
 ajZ
 atb
 aSA
@@ -36681,8 +38563,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -36699,10 +38581,10 @@ aSA
 aBg
 aEC
 aBr
-aVD
+aCp
 aVD
 ajZ
-skM
+hfv
 aJN
 air
 aPl
@@ -36740,7 +38622,7 @@ aMz
 aWa
 alu
 aEC
-aVD
+aCp
 aos
 aJe
 alu
@@ -36751,7 +38633,7 @@ aKa
 aJe
 alu
 alu
-alu
+epS
 alu
 aJe
 alu
@@ -36768,7 +38650,7 @@ aJe
 acB
 aWa
 aEC
-aVD
+aCp
 ajZ
 ajX
 adD
@@ -36858,8 +38740,8 @@ aEG
 aEG
 aEG
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -36876,7 +38758,7 @@ aSA
 aBg
 aEC
 jmu
-aMz
+pPl
 jmu
 ajZ
 acT
@@ -36914,10 +38796,10 @@ dNq
 aMz
 aMz
 aMz
-aWa
-alu
+abb
+epS
 aEC
-aVD
+aCp
 axl
 aYA
 aYA
@@ -36945,7 +38827,7 @@ aYA
 awn
 aWa
 aEC
-aVD
+aCp
 ajZ
 atb
 aSA
@@ -37035,8 +38917,8 @@ aPM
 aPM
 aPM
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -37053,7 +38935,7 @@ aSA
 aBg
 aEC
 aBr
-aVD
+aCp
 aVD
 ajZ
 epS
@@ -37071,7 +38953,7 @@ aEC
 aVD
 aVD
 aVD
-ajZ
+ylw
 aEC
 aVD
 aVD
@@ -37086,7 +38968,7 @@ alu
 aWa
 aWa
 aWa
-aWa
+abb
 aWa
 aWa
 aWa
@@ -37094,7 +38976,7 @@ aWa
 aWa
 alu
 aKX
-aHI
+vSP
 aDm
 aJi
 aDm
@@ -37105,15 +38987,15 @@ aHu
 jmu
 aWa
 abJ
+ahA
 aUD
 aUD
-aUD
-aUD
+ahA
 aUD
 aTA
 aHu
 aRm
-aHu
+mkS
 aWa
 abJ
 aUD
@@ -37122,7 +39004,7 @@ aUD
 aTA
 aTA
 aKX
-aHI
+vSP
 abK
 aTp
 aSA
@@ -37212,8 +39094,8 @@ gWx
 cXg
 aPM
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -37227,79 +39109,79 @@ aEG
 aEG
 atb
 aSA
-aBg
-aKX
-aHI
-aHI
-aHI
-abK
-alu
-aEC
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-ajZ
-aEC
-aVD
-aBr
-aVD
-ajZ
-aEC
-aVD
-aVD
-aVD
-ajZ
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-alu
-aWa
-aWa
-abb
-aEC
-aVD
-aVD
-aVD
-ajZ
-aWa
-aWa
-abb
-aEC
-aVD
-aVD
-aVD
-aVD
-aBr
-aVD
-ajZ
-aWa
-aWa
-aWa
-aWa
-aEC
-aVD
-aVD
-aVD
-ajZ
-aWa
-aWa
+isE
+otR
+jQt
+bNJ
+psZ
+pVB
+pKJ
+cCl
+ala
+ala
+ala
+udf
+cCl
+ala
+ala
+ala
+udf
+cCl
+ala
+ala
+ala
+udf
+cCl
+ala
+pSr
+ala
+udf
+cCl
+ala
+ala
+ala
+udf
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+pKJ
+uhH
+xLT
+ozQ
+cCl
+ala
+iYu
+ala
+udf
+uhH
+uhH
+ozQ
+cCl
+ala
+rBV
+iYu
+iYu
+pSr
+ala
+udf
+uhH
+uhH
+uhH
+uhH
+cCl
+ala
+ala
+ala
+udf
+uhH
+jNs
 aWa
 akb
 adz
@@ -37389,8 +39271,8 @@ cXg
 cXg
 aPM
 aEG
-aEG
-aEG
+sCf
+sCf
 aEG
 aEG
 aEG
@@ -37407,7 +39289,7 @@ aSA
 aBg
 aWa
 aWa
-aWa
+rfp
 aWa
 aWa
 alu
@@ -37437,7 +39319,7 @@ aHI
 aHI
 abK
 alu
-aWa
+abb
 aWa
 aWa
 aWa
@@ -37454,13 +39336,13 @@ aKX
 aHI
 aHI
 aHI
-abK
+twr
 aWa
 aWa
 aWa
 aKX
 aHI
-aHI
+vSP
 aHI
 aHI
 aHI
@@ -37472,7 +39354,7 @@ aWa
 aWa
 aKX
 aHI
-aHI
+iBT
 aHI
 abK
 aWa
@@ -37584,7 +39466,7 @@ aJg
 aJg
 alu
 alu
-alu
+yjy
 alu
 alu
 alu
@@ -37628,7 +39510,7 @@ alu
 alu
 alu
 alu
-alu
+nIL
 alu
 alu
 alu
@@ -37637,7 +39519,7 @@ alu
 alu
 nIL
 alu
-alu
+yjy
 alu
 nIL
 alu
@@ -37764,46 +39646,46 @@ aoq
 ayJ
 aoq
 aoq
-akb
-aJg
-aJg
-aJg
-aJg
-aJg
+adz
+adz
+adz
+adz
+adz
+adz
 aAc
 afN
 aEA
 afN
 aFU
-aJg
-aJg
-aJg
-aJg
-aJg
+adz
+adz
+adz
+adz
+adz
 aAc
 afN
 aEA
 afN
 aFU
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
+adz
+adz
+adz
+adz
+adz
+adz
 aAc
 afN
 aEA
 afN
 aFU
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
+adz
+adz
+adz
+adz
+adz
+adz
+adz
+adz
 adz
 adz
 adz
@@ -37825,14 +39707,14 @@ aKF
 adz
 adz
 adz
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
-aJg
+adz
+adz
+adz
+adz
+adz
+adz
+adz
+adz
 aEG
 aEG
 aEG
@@ -37938,42 +39820,42 @@ aJg
 aJg
 acX
 lOc
-lOc
+rlm
 lOc
 tJa
-akb
+adz
 aEG
 aEG
 aEG
 aEG
-aJg
+adz
 aAp
 aAp
 aAp
 aAp
 aAp
-aJg
+adz
 aEG
 aEG
 aEG
-aJg
+adz
 aAp
 aAp
 aAp
 aAp
 aAp
-aJg
+adz
 aEG
 aEG
 aEG
 aEG
-aJg
+adz
 aAp
 aAp
 aAp
 aAp
 aAp
-aJg
+adz
 aEG
 aEG
 aEG
@@ -38115,12 +39997,12 @@ aEG
 aeR
 aVl
 adP
-adP
+kUi
 adP
 gjS
-akb
-akb
-akb
+adz
+adz
+adz
 aEG
 aEG
 aEG
@@ -38292,12 +40174,12 @@ aJg
 afy
 alE
 aVD
+aCp
 aVD
-aVD
-asx
-aJg
-aJg
-aJg
+bUL
+adz
+adz
+adz
 aEG
 aEG
 aEG
@@ -38339,7 +40221,7 @@ adz
 aLR
 aYN
 afu
-afu
+sVp
 asy
 afu
 aST
@@ -38352,7 +40234,7 @@ afu
 aST
 asy
 afu
-aST
+tkG
 aBz
 aKa
 adz
@@ -38474,7 +40356,7 @@ aiH
 abz
 aKI
 aLE
-aJg
+adz
 aEG
 aEG
 aEG
@@ -38646,12 +40528,12 @@ aKD
 aiz
 aVD
 alE
-atq
+onb
 asx
 aVD
 aKI
 aqX
-aJg
+adz
 aEG
 aEG
 aEG
@@ -38823,12 +40705,12 @@ aKD
 afy
 aVD
 alE
-atq
+eWD
 asx
 aVD
 aEe
 axg
-aJg
+adz
 aEG
 aEG
 aEG
@@ -39005,7 +40887,7 @@ asx
 aVD
 aEe
 vXI
-aJg
+adz
 aEG
 aEG
 aEG
@@ -39182,7 +41064,7 @@ aVF
 aTV
 aEe
 aha
-aJg
+adz
 aEG
 aEG
 aEG
@@ -39354,12 +41236,12 @@ akG
 auB
 alE
 aVD
+aCp
 aVD
-aVD
-asx
-aJg
-aJg
-aJg
+bUL
+adz
+adz
+adz
 aEG
 aEG
 aEG
@@ -39529,12 +41411,12 @@ aEG
 aJg
 aOM
 aJg
-aiV
+dJU
 aiH
-aAi
+saH
 aAi
 abz
-aJg
+adz
 akb
 akb
 aEG
@@ -39706,12 +41588,12 @@ aEG
 aJg
 aJg
 aJg
-aJg
+wmA
 avl
 arX
 aQb
 avl
-aJg
+adz
 aEG
 aEG
 aEG
