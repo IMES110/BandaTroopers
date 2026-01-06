@@ -464,6 +464,6 @@
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
 
-/datum/map_template/shuttle/tornado220 // 220 EDIT
+/datum/map_template/shuttle/tornado220 // SS220 EDIT
 	name = "TRP-Tornado"
 	shuttle_id = DROPSHIP_TORNADO_220
