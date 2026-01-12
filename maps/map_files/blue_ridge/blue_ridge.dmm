@@ -99,7 +99,8 @@
 "aak" = (
 /obj/structure/machinery/vending/snack/packaged{
 	pixel_y = 22;
-	wrenchable = 0
+	wrenchable = 0;
+	can_block_movement = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -1883,9 +1884,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "agh" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	layer = 4.1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -2403,7 +2406,8 @@
 /obj/structure/machinery/vending/coffee{
 	density = 0;
 	pixel_y = 19;
-	pixel_x = -1
+	pixel_x = -1;
+	can_block_movement = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -3906,9 +3910,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aot" = (
-/obj/structure/machinery/chem_dispenser/canteen,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/chem_dispenser/canteen{
+	layer = 4.1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -5203,9 +5209,6 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	brightness = 9
 	},
-/obj/item/clothing/head/helmet/marine/leader{
-	pixel_y = 9
-	},
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "aus" = (
@@ -5981,9 +5984,11 @@
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/dorms)
 "axK" = (
-/obj/structure/machinery/chem_dispenser/canteen,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/chem_dispenser/canteen{
+	layer = 4.1
 	},
 /turf/open/floor/almayer/silver,
 /area/golden_arrow/cryo_cells)
@@ -6145,7 +6150,8 @@
 /obj/structure/machinery/disposal{
 	density = 0;
 	layer = 3.2;
-	pixel_x = -9
+	pixel_x = -9;
+	can_block_movement = 0
 	},
 /turf/open/floor/almayer/silver/northwest,
 /area/golden_arrow/dorms)
@@ -8436,6 +8442,10 @@
 /obj/structure/surface/table/woodentable/fancy,
 /obj/structure/machinery/computer/cameras/wooden_tv/almayer{
 	dir = 8
+	},
+/obj/item/clothing/glasses/night/medhud/no_nvg{
+	pixel_y = -9;
+	pixel_x = 6
 	},
 /turf/open/floor/strata/fake_wood,
 /area/golden_arrow/platoon_commander_rooms)
@@ -10774,15 +10784,18 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aQS" = (
-/obj/structure/machinery/chem_dispenser/canteen,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
 	name = "dip cup";
 	pixel_x = 5;
-	pixel_y = 25
+	pixel_y = 25;
+	layer = 4.2
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/chem_dispenser/canteen{
+	layer = 4.1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -12016,7 +12029,7 @@
 /obj/structure/bed/roller/hospital_empty/bigrollerempty2,
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_power = 0.7
+	brightness = 9
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
@@ -16336,10 +16349,7 @@
 /obj/item/device/megaphone,
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/device/whistle,
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	pixel_y = -1;
-	brightness = 7
-	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
 "hMX" = (
@@ -16908,7 +16918,8 @@
 "iNK" = (
 /obj/item/reagent_container/food/snacks/cracker/tachyon{
 	pixel_y = -5;
-	pixel_x = 3
+	pixel_x = 3;
+	layer = 4.2
 	},
 /turf/open/floor/almayer/silver,
 /area/golden_arrow/cryo_cells)
@@ -17533,7 +17544,8 @@
 /area/golden_arrow/synthcloset)
 "knW" = (
 /obj/structure/machinery/vending/ingredients{
-	pixel_y = 20
+	pixel_y = 20;
+	can_block_movement = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -17821,11 +17833,12 @@
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
 "kXr" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	light_power = 0.3;
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7;
+	pixel_y = 6
+	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/golden_arrow/medical)
 "kXy" = (
@@ -18120,9 +18133,14 @@
 /turf/open/space/basic,
 /area/space)
 "lDX" = (
-/obj/structure/machinery/shower,
-/turf/closed/wall/almayer,
-/area/golden_arrow/platoon_commander_rooms)
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "lEQ" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -19028,6 +19046,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
+"naD" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	brightness = 9
+	},
+/turf/open/floor/almayer/cargo_arrow/east,
+/area/golden_arrow/hangar)
 "ncd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -20039,6 +20063,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoon_commander_rooms)
+"pqV" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1;
+	light_power = 0.7;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
 "prm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -20346,9 +20378,6 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
 	brightness = 9
-	},
-/obj/item/clothing/head/helmet/marine/leader{
-	pixel_y = 9
 	},
 /turf/open/floor/almayer/red/north,
 /area/golden_arrow/platoonarmory)
@@ -21917,6 +21946,9 @@
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/structure/machinery/door/window/westleft,
 /obj/item/tool/soap/syndie,
+/obj/structure/machinery/shower{
+	pixel_y = 22
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/platoon_commander_rooms)
 "tcu" = (
@@ -22057,7 +22089,6 @@
 /turf/open/floor/almayer/orange,
 /area/golden_arrow/platoonarmory)
 "tsK" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
 	light_color = "#dae2ff";
@@ -22065,6 +22096,9 @@
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	layer = 4.1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -23432,7 +23466,7 @@
 	icon_state = "door_warning";
 	dir = 8
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/prep_hallway)
 "wmG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -24117,6 +24151,15 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
+"xKv" = (
+/obj/structure/machinery/chem_dispenser/canteen{
+	layer = 4.1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "xLG" = (
 /obj/structure/barricade/handrail,
 /obj/structure/barricade/handrail{
@@ -30829,7 +30872,7 @@ aKk
 aCB
 aNn
 avE
-aot
+xKv
 aeA
 aKk
 aCB
@@ -35019,7 +35062,7 @@ aGv
 aDh
 aDh
 tmN
-lDX
+tmN
 tcj
 wSY
 srf
@@ -36478,7 +36521,7 @@ tnV
 lPm
 ojW
 act
-vRh
+pqV
 xTB
 vRh
 fLD
@@ -37212,7 +37255,7 @@ fRZ
 afN
 aEA
 afN
-afN
+naD
 adz
 adz
 aEG
@@ -38749,7 +38792,7 @@ aEG
 adz
 adz
 adz
-aHu
+lDX
 joW
 pyZ
 swB
