@@ -8526,6 +8526,9 @@
 	dir = 4;
 	pixel_x = -10
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/cryo_cells)
 "aGU" = (
@@ -13786,6 +13789,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
+"crT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/edge/smooth/endcap_right/north,
+/area/golden_arrow/cryo_cells)
 "crZ" = (
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
@@ -15236,6 +15245,19 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"fiV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "fkj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 8
@@ -17084,8 +17106,7 @@
 /area/golden_arrow/platoonprep)
 "jbm" = (
 /obj/structure/blocker/invisible_wall/directional{
-	dir = 4;
-	opacity = 1
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
@@ -17561,6 +17582,15 @@
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
+"knC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "knD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -19096,6 +19126,10 @@
 "nem" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty/north_east,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	pixel_x = -23
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "nex" = (
@@ -23784,6 +23818,9 @@
 /obj/item/trash/USCMtray{
 	pixel_x = 15
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "wRv" = (
@@ -24150,8 +24187,7 @@
 	pixel_y = 16
 	},
 /obj/structure/blocker/invisible_wall/directional{
-	dir = 4;
-	opacity = 1
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
@@ -28799,7 +28835,7 @@ adW
 adW
 abx
 aJU
-aBk
+kJD
 aJU
 aWh
 aEG
@@ -28976,7 +29012,7 @@ aao
 aoU
 aPS
 aoU
-aBk
+aVk
 acL
 aWh
 aEG
@@ -29153,7 +29189,7 @@ abg
 aoU
 aog
 aoU
-aBk
+aVk
 acL
 aaS
 aEG
@@ -29330,7 +29366,7 @@ aBk
 arM
 ayp
 gDf
-aBk
+aVk
 apG
 aWh
 aEG
@@ -29507,7 +29543,7 @@ aLz
 aoU
 aog
 aoU
-ave
+knC
 ahY
 aWh
 aEG
@@ -29684,7 +29720,7 @@ aBk
 arM
 aog
 gDf
-aBk
+aVk
 aIK
 aWh
 aEG
@@ -29861,7 +29897,7 @@ awk
 aoU
 aog
 aoU
-awk
+fiV
 avi
 aWh
 aWh
@@ -30038,7 +30074,7 @@ adW
 adW
 aUN
 adW
-adW
+nFo
 adW
 aiU
 aog
@@ -30215,7 +30251,7 @@ aeA
 aht
 nIE
 aNn
-ajF
+cXR
 aNY
 olG
 aVT
@@ -30392,7 +30428,7 @@ aeA
 aKk
 ahK
 aNn
-aBk
+kJD
 aBk
 atv
 aBv
@@ -30569,7 +30605,7 @@ aJA
 aKk
 ahK
 aLw
-aBk
+kJD
 kQE
 aoe
 afq
@@ -30746,7 +30782,7 @@ aeA
 aht
 aCB
 aNn
-aBk
+kJD
 aBk
 aed
 aBv
@@ -30923,7 +30959,7 @@ aeA
 aKk
 aCB
 aNn
-ajF
+cXR
 aNY
 aog
 akY
@@ -31277,7 +31313,7 @@ aBk
 pjD
 emo
 ajF
-aBk
+kJD
 aBk
 aiU
 oMx
@@ -31454,7 +31490,7 @@ aBk
 atm
 atm
 atm
-aBk
+kJD
 aNY
 aog
 aVT
@@ -31631,7 +31667,7 @@ aYb
 rvR
 kaJ
 sJQ
-aQm
+crT
 aBk
 atv
 aBv
@@ -31808,7 +31844,7 @@ aBk
 anG
 aUc
 aUc
-aBk
+kJD
 aBk
 aoe
 ikK
