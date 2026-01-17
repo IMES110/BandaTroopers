@@ -3099,15 +3099,12 @@
 /turf/open/floor/almayer/emerald,
 /area/golden_arrow/platoon_commander_rooms)
 "alC" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
 	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/almayer,
+/obj/structure/machinery/landinglight/ds2/spoke,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "alD" = (
 /turf/open/floor/almayer/edge/smooth/north,
@@ -11082,9 +11079,6 @@
 	},
 /turf/open/floor/almayer/blue,
 /area/golden_arrow/platoonarmory)
-"aRI" = (
-/turf/open/space/basic,
-/area/golden_arrow/cryo_cells)
 "aRJ" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
@@ -11980,8 +11974,10 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonarmory)
 "aVj" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/floor/almayer/plate,
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aVk" = (
 /obj/structure/cable/heavyduty{
@@ -13310,6 +13306,9 @@
 "bEm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -32
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
@@ -29485,9 +29484,9 @@ aEG
 aEG
 aEG
 aEG
-aRI
-aRI
-aRI
+aEG
+aEG
+aEG
 aWh
 aFo
 awW
@@ -29662,9 +29661,9 @@ ahl
 ahl
 ahl
 ahl
-aRI
-aRI
-aRI
+aEG
+aEG
+aEG
 aWh
 aSR
 awW
@@ -33212,7 +33211,7 @@ aog
 aog
 aog
 aog
-aiU
+aog
 agE
 aTr
 aTr
@@ -38546,7 +38545,7 @@ adp
 aCO
 aBm
 asY
-alC
+azb
 azb
 ooC
 asY
@@ -38707,29 +38706,29 @@ epS
 riS
 aCp
 gbH
-aJe
+alC
 alu
 aKa
 alu
 alu
 alu
-aJe
+alC
 aKa
 alu
 alu
 alu
-aJe
+alC
 alu
 aKa
 aKa
 aKa
-aJe
+alC
 alu
 alu
 alu
 aKa
 alu
-aJe
+alC
 acB
 aWa
 riS
@@ -39769,7 +39768,7 @@ lRg
 riS
 aCp
 aJj
-aJe
+alC
 aRR
 ayX
 ayX
@@ -40831,29 +40830,29 @@ alu
 riS
 aCp
 aos
-aJe
+alC
 alu
 aKa
 aKa
 alu
 aKa
-aJe
+alC
 alu
 alu
 epS
 alu
-aJe
+alC
 alu
 alu
 aKa
 alu
-aJe
+alC
 alu
-aVj
+alu
 alu
 aKa
 alu
-aJe
+alC
 acB
 aWa
 riS
@@ -43794,7 +43793,7 @@ aEG
 aEG
 aEG
 aEG
-adz
+aVj
 xTE
 avl
 arX
