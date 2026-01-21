@@ -4247,10 +4247,8 @@
 /area/golden_arrow/vehicle_shuttle/two/upper)
 "apZ" = (
 /obj/structure/machinery/door/poddoor/almayer{
-	dir = 2
-	},
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 2
+	dir = 2;
+	name = "Port Locks"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
@@ -9096,10 +9094,11 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aJf" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 2
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
 	},
-/turf/open/floor/almayer/test_floor4,
+/turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aJi" = (
 /obj/effect/decal/warning_stripes{
@@ -16866,6 +16865,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
+"iEn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/dorms)
 "iGx" = (
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
@@ -17080,6 +17089,16 @@
 	},
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
+"iYF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	pixel_y = 25
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/hangar)
 "iZR" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
@@ -21536,7 +21555,7 @@
 /area/golden_arrow/supply)
 "sbg" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2-8"
+	icon_state = "1-4-8"
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
@@ -21868,15 +21887,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonarmory)
 "syk" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 2;
+	name = "Port Locks"
 	},
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	pixel_x = -14
+	icon_state = "1-2"
 	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/hangar)
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/dorms)
 "syZ" = (
 /obj/structure/cargo_container/armat/mid{
 	pixel_x = 2;
@@ -22962,6 +22981,13 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/golden_arrow/platoon_commander_rooms)
+"uXp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = 4
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/dorms)
 "uXF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -33299,8 +33325,8 @@ afv
 afv
 arC
 arC
-aEG
-aEG
+arC
+arC
 aEG
 aEG
 aEG
@@ -33475,9 +33501,9 @@ aWo
 huB
 apZ
 aJf
-arC
-aEG
-aEG
+eqr
+uXp
+apZ
 aEG
 aEG
 aEG
@@ -33650,11 +33676,11 @@ anZ
 anZ
 anZ
 fwp
-aJf
-aJf
-arC
-aEG
-aEG
+syk
+glP
+anZ
+iEn
+apZ
 aEG
 aEG
 aEG
@@ -33827,11 +33853,11 @@ kNp
 hbe
 kXy
 gvG
+apZ
 aJf
-aJf
-arC
-aEG
-aEG
+ngb
+uXp
+apZ
 aEG
 aEG
 aEG
@@ -34007,8 +34033,8 @@ arC
 arC
 arC
 arC
-aEG
-aEG
+arC
+arC
 aEG
 aEG
 aEG
@@ -38346,7 +38372,7 @@ pKJ
 tgm
 mOO
 sbg
-mOO
+iYF
 awI
 ala
 tgm
@@ -38522,7 +38548,7 @@ wxa
 aBg
 aEC
 aVD
-syk
+aCp
 aVD
 ajZ
 uXF
