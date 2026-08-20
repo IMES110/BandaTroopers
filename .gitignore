@@ -38,6 +38,10 @@ modular/__agents/.AI_AGENT/logs/
 maps/templates_extra.dm
 maps/templates_base.dm
 
+#ALL_MAPS juke import files
+maps/templates_extra.dm
+maps/templates_base.dm
+
 # byond-tracy backend, not shipped with the codebase so it shouldn't be maintained
 prof.dll
 libprof.so
