@@ -2158,6 +2158,34 @@
 	random_under_chance = 50
 	random_spawn_under = list(/obj/item/attachable/flashlight/grip)
 
+/obj/item/weapon/gun/rifle/l42a/abr40/canc
+	name = "Type 40 marksman rifle"
+	desc = "CANC licensed and manufactured modification of TWE's L42A rifle, chambered in the newest CANC 6x38mm caliber. Extremely common during the Dog War, but nowadays extremely rare due to the UPP destroying most of the remaining stockpiles, thus valued by collectors."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "type40"
+	item_state = "type40"
+	fire_sound = 'sound/weapons/gun_mar40.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/type40
+	attachable_allowed = list(
+		//Barrel,
+		/obj/item/attachable/bayonet/canc,
+		//Rail,
+		/obj/item/attachable/scope/mini/hunting/upp,
+		/obj/item/attachable/flashlight,
+		//Under,
+		//Stock,
+		/obj/item/attachable/stock/carbine/wood/canc,
+	)
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/canc, /obj/item/attachable/scope/mini/hunting/upp)
+
+/obj/item/weapon/gun/rifle/l42a/abr40/canc/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 21, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 10, "side_rail_x" = 22, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/rifle/l42a/abr40/canc/sniper
+	current_mag = /obj/item/ammo_magazine/rifle/type40/ap
+
+/obj/item/weapon/gun/rifle/l42a/abr40/canc/infantry
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/canc, /obj/item/attachable/bayonet/canc, /obj/item/attachable/flashlight)
 
 //-------------------------------------------------------
 // R81M1A Rifle
