@@ -4628,6 +4628,28 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bipod/m60/m38
 	attach_icon = "bipod_m38_a"
 
+/obj/item/attachable/bipod/r81
+	name = "R81M1D bipod"
+	desc = "An integral bipod for the R81M1D Pulse Squad Automatic Weapon."
+	icon = 'icons/obj/items/weapons/guns/attachments/attachments_pr.dmi'
+	icon_state = "bipod_fal_saw_a" // SS220 EDIT: use the PR-specific bipod sprite in the PR attachment atlas
+	attach_icon = "bipod_fal_saw_a"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/r81/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	recoil_mod = -RECOIL_AMOUNT_TIER_2
+	fa_scatter_peak_mod = 15
+
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"
 	desc = "A set of rugged telescopic poles to keep a weapon stabilized during firing."
