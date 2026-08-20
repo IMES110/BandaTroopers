@@ -5,20 +5,20 @@
 
 /datum/paygrade/canc/ca1
 	paygrade = PAY_SHORT_CA1
-	name = "Liè Bīng"
-	prefix = "Li."
+	name = "Line Soldier"
+	prefix = "LinS."
 	pay_multiplier = 0.2
 
 /datum/paygrade/canc/ca2
 	paygrade = PAY_SHORT_CA2
-	name = "Xià Shì"
-	prefix = "Xi."
+	name = "Senior Soldier"
+	prefix = "SenS."
 	pay_multiplier = 0.3
 
 /datum/paygrade/canc/ca3
 	paygrade = PAY_SHORT_CA3
-	name = "Zhōng Shì"
-	prefix = "Zh."
+	name = "Junior Commander"
+	prefix = "JunC."
 	pay_multiplier = 0.4
 
 /datum/paygrade/canc/ca4
