@@ -1497,13 +1497,6 @@
 /obj/item/clothing/accessory/pads/greaves/standard
 	flags_atom = NO_SNOW_TYPE
 
-/obj/item/clothing/accessory/pads/greaves/canc
-	name = "Type 12 greaves"
-	desc = "CANC-made greaves for their NEWEST armor system."
-	icon_state = "canc_greaves"
-	item_state = "canc_greaves"
-	flags_atom = NO_SNOW_TYPE
-
 /obj/item/clothing/accessory/pads/kneepads
 	name = "\improper M3 Kneepads"
 	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
@@ -2265,20 +2258,3 @@
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 	slot = ACCESSORY_SLOT_M3UTILITY
 // SS220 EDIT - END
-
-/obj/item/clothing/accessory/storage/webbing/m3/old
-	name = "\improper MACE Webbing"
-	icon_state = "macenormal"
-	desc = "Outdated Modular Assault Carrying Equipment, designed to be worn over M59 series of flak vests."
-
-/obj/item/clothing/accessory/storage/webbing/m3/small/old
-	name = "\improper MACE Small Pouch Webbing"
-	icon_state = "macesmall"
-	desc = "An outdated Modular Assault Carrying Equipment, configured to carry a whole array of small items."
-
-/obj/item/clothing/accessory/storage/webbing/m3/drop
-	name = "\improper MACE Drop Pouch Webbing"
-	desc = "An unusual piece of kit, this Modular Assault Carrying Equipment webbing is configured to carry a single sizeable pouch."
-	icon_state = "macedrop"
-	hold = /obj/item/storage/internal/accessory/drop_pouch
-	slot = ACCESSORY_SLOT_M3UTILITY

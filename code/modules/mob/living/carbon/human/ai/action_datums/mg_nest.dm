@@ -93,7 +93,6 @@
 		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,
 		/datum/equipment_preset/rebel/soldier/machinegunner::name = /datum/equipment_preset/rebel/soldier/machinegunner,
 		/datum/equipment_preset/clf/soldier/machinegunner::name = /datum/equipment_preset/clf/soldier/machinegunner,
-		/datum/equipment_preset/canc/remnant/old/commando/machinegunner::name = /datum/equipment_preset/canc/remnant/old/commando/machinegunner,
 		/datum/equipment_preset/mercenary/sentinel/mg::name = /datum/equipment_preset/mercenary/sentinel/mg,
 		/datum/equipment_preset/fil/rifleman/mg::name = /datum/equipment_preset/fil/rifleman/mg,
 		// SS220 EDIT - START

@@ -91,9 +91,6 @@
 		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
 		/datum/equipment_preset/mercenary/sentinel/marksman::name = /datum/equipment_preset/mercenary/sentinel/marksman,
 		/datum/equipment_preset/mercenary/infiltrator::name = /datum/equipment_preset/mercenary/infiltrator,
-		/datum/equipment_preset/canc/remnant/old/marksman::name = /datum/equipment_preset/canc/remnant/old/marksman,
-		/datum/equipment_preset/canc/remnant/old/marksman/ghillie::name = /datum/equipment_preset/canc/remnant/old/marksman/ghillie,
-		/datum/equipment_preset/canc/remnant/old/commando/sniper::name = /datum/equipment_preset/canc/remnant/old/commando/sniper,
 		/datum/equipment_preset/fil/rifleman/sniper::name = /datum/equipment_preset/fil/rifleman/sniper,
 		// SS220 EDIT - START
 		// HALO AI sniper presets.
