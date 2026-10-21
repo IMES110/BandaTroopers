@@ -1,6 +1,7 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
 #define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
+#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow",  "USS Golden Arrow (Classic)", "SSV Chapaev", "USS Rover", "USCSS Firefly", "USCSS Obsidian Falk", "USCSS Onyx Karain", "HMS Brynhild", "GJ1232 - Badayaga")
 
 // SS220 EDIT - START: PR #1283 Movie-ish Sections — add movie ship map names
 // SS220 EDIT - END
