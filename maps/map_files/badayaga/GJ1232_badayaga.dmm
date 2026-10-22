@@ -1419,7 +1419,8 @@
 /obj/structure/phone_base/rotary{
 	pixel_x = -9;
 	pixel_y = 0;
-	phone_category = "Command Freq"
+	phone_category = "Command Freq";
+	phone_id = "CMD.OFFICE"
 	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/command_rooms)
@@ -14440,10 +14441,11 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside)
 "xL" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/banners/colonial_marines_flag_worn{
-	pixel_y = -2
+	pixel_y = 30
 	},
-/turf/closed/wall/hangar,
+/turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground/command_rooms)
 "xM" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -24194,7 +24196,9 @@
 	},
 /obj/structure/phone_base/rotary{
 	pixel_x = -9;
-	pixel_y = 0
+	pixel_y = 0;
+	phone_category = "Overwatch";
+	phone_id = "Command Office"
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = 10;
@@ -55787,8 +55791,8 @@ zg
 Lo
 PQ
 cM
+Dv
 xL
-qe
 me
 bt
 vU
