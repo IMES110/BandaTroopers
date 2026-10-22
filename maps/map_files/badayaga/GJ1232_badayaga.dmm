@@ -1411,14 +1411,15 @@
 /area/badayaga/inside_underground/platoonarmory)
 "cc" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/tacmap_map{
-	pixel_x = -6;
-	pixel_y = 7
-	},
 /obj/structure/sign/safety/commline_connection{
 	name = "communication line semiotic";
 	pixel_y = 27;
 	pixel_x = 4
+	},
+/obj/structure/phone_base/rotary{
+	pixel_x = -9;
+	pixel_y = 0;
+	phone_category = "Command Freq"
 	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/command_rooms)
@@ -16585,6 +16586,10 @@
 /obj/item/tacmap_map{
 	pixel_x = 6;
 	pixel_y = 17
+	},
+/obj/item/tacmap_map{
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/badayaga/inside_underground/command_rooms)
